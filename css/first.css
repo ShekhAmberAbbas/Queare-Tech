@@ -105,21 +105,17 @@ overflow-x:hidden;
 
 }
 
-body{
-
-font-family:'Inter',sans-serif;
-
-background:var(--bg);
-
-color:var(--text);
-
-overflow-x:hidden;
-
-transition:
-background .4s ease,
-color .4s ease;
-
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  font-weight: 400;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  transition: background .4s ease, color .4s ease;
 }
+
 
 /* ==========================================
    TYPOGRAPHY
@@ -127,11 +123,11 @@ color .4s ease;
 
 h1,h2,h3,h4,h5,h6{
 
-font-family:'Syne',sans-serif;
-
-font-weight:700;
-
-color:var(--heading);
+font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  color: var(--heading);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
 
 }
 
@@ -168,28 +164,22 @@ color:var(--primary);
 
 border-radius:50px;
 
-font-size:.85rem;
-
-font-weight:700;
-
-margin-bottom:20px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;    /* wide tracking on labels = clean */
+  text-transform: uppercase;
 
 }
 
 .section-title{
 
-font-size:
-clamp(
-2.2rem,
-5vw,
-4.5rem
-);
-
-font-weight:800;
-
-line-height:1.15;
-
-margin-bottom:20px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2.2rem, 5vw, 4.5rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  margin-bottom: 20px;
 
 }
 
@@ -279,15 +269,11 @@ text-align:center;
 
 .loader-logo{
 
-font-size:2.5rem;
-
-font-weight:800;
-
-font-family:'Syne',sans-serif;
-
-margin-bottom:30px;
-
-color:var(--heading);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: var(--heading);
 
 }
 
@@ -340,10 +326,9 @@ left:50%;
 
 transform:
 translate(-50%,-50%);
-
-font-weight:800;
-
-font-size:1.2rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
 
 color:var(--heading);
 
@@ -572,9 +557,9 @@ align-items:center;
 
 gap:10px;
 
-font-size:1.4rem;
-
-font-weight:800;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
 
 color:var(--heading)!important;
 
@@ -587,14 +572,10 @@ color:var(--primary);
 }
 
 .nav-link{
-
-font-weight:600;
-
-margin:0 10px;
-
-color:var(--heading)!important;
-
-position:relative;
+font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
 
 }
 
@@ -749,30 +730,23 @@ margin-bottom:25px;
 
 .hero-title{
 
-font-size:
-clamp(
-3rem,
-7vw,
-6rem
-);
-
-font-weight:800;
-
-line-height:1.05;
-
-margin-bottom:25px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2rem, 5vw, 5rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.03em;   /* tighter on large display text */
+  margin-bottom: 25px;
 
 }
 
 .hero-description{
 
-font-size:1.1rem;
-
-line-height:1.9;
-
-max-width:620px;
-
-margin-bottom:35px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.85;
+  font-weight: 400;
+  max-width: 620px;
+  margin-bottom: 35px;
 
 }
 
@@ -816,13 +790,19 @@ box-shadow:var(--shadow-sm);
 
 .stat-card h3{
 
-font-size:2rem;
-
-color:var(--primary);
-
-margin-bottom:5px;
+ font-family: 'Space Grotesk', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 5px;
 
 }
+.stat-card p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
 
 /* ==========================================
    HERO RIGHT
@@ -1607,10 +1587,9 @@ var(--secondary)
 );
 
 color:#fff;
-
-font-weight:700;
-
-text-align:center;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.01em;
 
 }
 
@@ -2444,6 +2423,7 @@ background:#0f172a;
 padding-top:100px;
 
 color:#cbd5e1;
+font-family: 'Plus Jakarta Sans', sans-serif;
 
 }
 
@@ -2472,6 +2452,8 @@ margin:0;
 color:#fff;
 
 margin-bottom:20px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
 
 }
 
@@ -2752,7 +2734,11 @@ flex-direction:column;
 width:100%;
 
 }
-
+.btn {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
 .stat-card{
 
 width:100%;
