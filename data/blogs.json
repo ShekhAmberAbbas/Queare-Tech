@@ -1,0 +1,20 @@
+[
+  {
+    "title": "How AI is Transforming Enterprise Software",
+    "excerpt": "Discover how AI and automation are helping organizations improve efficiency and decision making.",
+    "image": "assets/blogs/blog1.jpg",
+    "link": "#"
+  },
+  {
+    "title": "Cloud Migration Best Practices in 2026",
+    "excerpt": "Learn proven strategies for successful cloud migration and digital transformation.",
+    "image": "assets/blogs/blog2.jpg",
+    "link": "#"
+  },
+  {
+    "title": "Modern Cyber Security Architecture",
+    "excerpt": "Explore enterprise security frameworks for protecting applications and infrastructure.",
+    "image": "assets/blogs/blog3.jpg",
+    "link": "#"
+  }
+]
