@@ -25,6 +25,120 @@
    PRELOADER
 ========================================================= */
 
+/* =========================================================
+   SPLIT TYPE — FIXED
+========================================================= */
+
+// if (typeof SplitType !== "undefined") {
+
+//   const splitElements =
+//     document.querySelectorAll(".split-text");
+
+//   splitElements.forEach(el => {
+
+//     // "words, chars" wraps each word first,
+//     // then splits chars INSIDE that word wrapper
+//     // Words can no longer break mid-character
+//     const split = new SplitType(el, {
+//       types: "words, chars"
+//     });
+
+//     gsap.from(split.chars, {
+
+//       opacity: 0,
+//       y: 80,
+//       rotateX: -90,
+
+//       duration: 0.8,
+//       stagger: 0.02,
+//       ease: "power4.out",
+
+//       scrollTrigger: {
+//         trigger: el,
+//         start: "top 85%"
+//       }
+
+//     });
+
+//   });
+
+// }
+
+/* =========================================================
+   SPLIT TYPE — FIXED (words, not chars)
+========================================================= */
+
+// if (typeof SplitType !== "undefined") {
+
+//   const splitElements =
+//     document.querySelectorAll(".split-text");
+
+//   splitElements.forEach(el => {
+
+//     const split = new SplitType(el, {
+//       types: "words"   // ← was "chars" — that caused mid-word breaks
+//     });
+
+//     gsap.from(split.words, {
+
+//       opacity: 0,
+//       y: 60,
+
+//       duration: 0.7,
+//       stagger: 0.08,   // each WORD slides in one by one
+//       ease: "power3.out",
+
+//       scrollTrigger: {
+//         trigger: el,
+//         start: "top 85%"
+//       }
+
+//     });
+
+//   });
+
+// }
+
+/* =========================================================
+   CUSTOM WORD SPLIT — Replaces SplitType entirely
+   Words wrap naturally at spaces, never mid-character
+========================================================= */
+
+document.querySelectorAll(".split-text").forEach(el => {
+
+  // Store original text
+  const originalText = el.innerText.trim();
+
+  // Split only at spaces → each word becomes one span
+  const words = originalText.split(/\s+/);
+
+  // Join spans with a real space between them
+  // Browser wraps ONLY at the space, never inside a word
+  el.innerHTML = words
+    .map(word =>
+      `<span class="split-word">${word}</span>`
+    )
+    .join(" ");
+
+  // Animate each word sliding up one by one
+  gsap.from(
+    el.querySelectorAll(".split-word"),
+    {
+      opacity: 0,
+      y: 50,
+      duration: 0.6,
+      stagger: 0.08,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: el,
+        start: "top 85%"
+      }
+    }
+  );
+
+});
+
+
 window.addEventListener("load", () => {
 
 const preloader =

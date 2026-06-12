@@ -174,12 +174,14 @@ border-radius:50px;
 
 .section-title{
 
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: clamp(2.2rem, 5vw, 4.5rem);
+font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(1.8rem, 4.5vw, 4.5rem); /* was 2.2rem min */
   font-weight: 700;
   letter-spacing: -0.025em;
   line-height: 1.15;
   margin-bottom: 20px;
+  word-break: keep-all;
+  hyphens: none;
 
 }
 
@@ -730,12 +732,14 @@ margin-bottom:25px;
 
 .hero-title{
 
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: clamp(2rem, 5vw, 5rem);
+ font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2rem, 6vw, 6rem);  /* was 3rem min — too big on mobile */
   font-weight: 700;
-  line-height: 1.05;
-  letter-spacing: -0.03em;   /* tighter on large display text */
+  line-height: 1.1;
+  letter-spacing: -0.03em;
   margin-bottom: 25px;
+  word-break: keep-all;
+  hyphens: none;
 
 }
 
@@ -2762,3 +2766,40 @@ bottom:15px;
 /* ==========================================
    END OF ENTERPRISE V3 CSS
 ========================================== */
+
+/* ==========================================
+   SPLITTYPE WORD + CHAR FIX
+========================================== */
+
+/* Word wrapper — acts as a mask for the char animation */
+.word {
+  display: inline-block;
+  overflow: hidden;          /* masks char sliding up into view */
+  vertical-align: bottom;   /* prevents baseline jump */
+  white-space: nowrap;       /* THIS is the key — word never splits */
+}
+
+.split-word {
+  display: inline-block;
+  white-space: nowrap;  /* word itself NEVER breaks */
+  /* No overflow hidden — just natural wrapping at spaces */
+}
+/* Individual characters */
+.char {
+  display: inline-block;
+  will-change: transform, opacity;
+}
+
+/* ==========================================
+   HEADING OVERFLOW GUARD
+   Applies to ALL big titles site-wide
+========================================== */
+
+.hero-title,
+.section-title,
+h1, h2, h3, h4 {
+  word-break: keep-all;       /* never break a word at line end */
+  overflow-wrap: normal;      /* don't force-wrap long words */
+  hyphens: none;              /* no auto hyphenation ever */
+  white-space: normal;        /* allow natural line wrapping */
+}
