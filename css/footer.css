@@ -1,0 +1,114 @@
+ 
+    /* ── PAGE RESET (remove if you already have one) ─────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {min-height: 100vh; display: flex; flex-direction: column; }
+    main { flex: 1; }
+
+    /* ── QUAERE FOOTER ───────────────────────────────────────────────── */
+    .quaere-footer {
+      background: #000000;
+      color: #ffffff;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    /* Top nav bar */
+    .qf-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.6rem 2.5rem;
+      border-top: 1px solid rgba(46, 30, 227, 0.08);
+    }
+    .qf-brand {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.5);
+    }
+    .qf-nav {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+    .qf-nav a {
+      font-size: 0.65rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.25);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .qf-nav a:hover { color: rgba(255, 255, 255, 0.85); }
+
+    /* Hero text container */
+    .qf-hero {
+      position: relative;
+      cursor: crosshair;
+      overflow: hidden;
+      line-height: 0; /* collapse whitespace gap under SVG */
+    }
+
+    /* Layer 1 – always-visible faint hint */
+    .qf-hero-base {
+      display: block;
+      width: 100%;
+      fill: #ffffff;
+      opacity: 0.2;
+    }
+
+    /* Layer 2 – revealed on hover via mask */
+    .qf-reveal-wrap {   
+      position: absolute;
+      inset: 0;
+      mask-image: radial-gradient(circle at -999px -999px, #302323 0%, transparent 0%);
+      -webkit-mask-image: radial-gradient(circle at -999px -999px, #000 0%, transparent 0%);
+    }
+    .qf-reveal-wrap svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+      fill: #0063d4;
+      opacity: 1;
+    }
+
+    /* Divider between hero and bottom bar */
+    .qf-divider {
+      height: 1px;
+      background: linear-gradient(
+        to right,
+        transparent,
+        rgba(167, 115, 249, 0.08) 20%,
+        rgba(255, 255, 255, 0.08) 80%,
+        transparent
+      );
+    }
+
+    /* Bottom copyright bar */
+    .qf-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.1rem 2.5rem;
+    }
+    .qf-copy, .qf-legal a {
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.16);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .qf-legal { display: flex; gap: 1.5rem; list-style: none; }
+    .qf-legal a:hover { color: rgba(255, 255, 255, 0.45); }
+
+    /* Responsive: hide nav links on small screens */
+    @media (max-width: 600px) {
+      .qf-nav { gap: 1rem; }
+      .qf-nav a { font-size: 0.6rem; }
+      .qf-top { padding: 1.25rem 1.25rem; }
+      .qf-bottom { padding: 0.9rem 1.25rem; flex-direction: column; gap: 0.6rem; }
+    }
+  

@@ -1,0 +1,216 @@
+/* ==================================================
+   ABOUT.CSS
+   Extends first.css — only new components for the
+   About page live here. Nothing here overrides the
+   shared design tokens from :root in first.css.
+================================================== */
+
+/* ==========================================
+   ABOUT HERO (shorter variant of .hero-section,
+   no Lottie panel, single text column)
+========================================== */
+
+.about-hero-section {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  padding-top: 45px;
+  padding-bottom: 60px;
+  overflow: hidden;
+}
+
+.min-vh-50 { min-height: 50vh; }
+
+/* ==========================================
+   LEADER MESSAGE PHOTO (Founder / Director sections)
+   Placeholder avatar — swap .leader-photo-placeholder
+   for a real <img class="leader-photo"> when photos
+   are supplied.
+========================================== */
+
+.leader-message-section .about-image-wrapper,
+.leader-photo-wrapper {
+  position: relative;
+  min-height: 420px;
+}
+
+.leader-photo-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.leader-photo-placeholder {
+  width: 100%;
+  max-width: 340px;
+  aspect-ratio: 4 / 5;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #dbeafe 0%, #cffafe 100%);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.leader-photo-placeholder i {
+  font-size: 6rem;
+  color: var(--primary);
+  opacity: .4;
+}
+
+.leader-name-tag {
+  margin-top: -30px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  padding: 16px 28px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  min-width: 260px;
+}
+
+.leader-name-tag h5 {
+  margin-bottom: 4px;
+  font-size: 1.1rem;
+}
+
+.leader-name-tag span {
+  font-size: .85rem;
+  color: var(--text);
+}
+
+/* ==========================================
+   LEADERSHIP TEAM GRID
+========================================== */
+
+.leadership-section {
+  padding: 70px 0;
+  background: var(--bg-secondary);
+}
+
+.leader-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  padding: 30px;
+  height: 100%;
+  text-align: center;
+  transition: .4s;
+  box-shadow: var(--shadow-sm);
+}
+
+.leader-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+}
+
+.leader-card-photo {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(37, 99, 235, .1), rgba(6, 182, 212, .1));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.leader-card-photo i {
+  font-size: 2.2rem;
+  color: var(--primary);
+}
+
+.leader-role-tag {
+  display: inline-block;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--primary);
+  background: rgba(37, 99, 235, .1);
+  padding: 6px 14px;
+  border-radius: 50px;
+  margin-bottom: 12px;
+}
+
+.leader-card h5 {
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+}
+
+.leader-position {
+  font-size: .85rem;
+  font-weight: 600;
+  color: var(--heading);
+  margin-bottom: 6px;
+}
+
+.leader-bio {
+  font-size: .82rem;
+  color: var(--text);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* ==========================================
+   FAQ ACCORDION
+========================================== */
+
+.faq-section {
+  padding: 70px 0;
+  background: var(--bg);
+}
+
+.faq-item {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 16px !important;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.faq-item .accordion-button {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  color: var(--heading);
+  background: transparent;
+  padding: 20px 24px;
+  box-shadow: none;
+}
+
+.faq-item .accordion-button:not(.collapsed) {
+  color: var(--primary);
+  background: rgba(37, 99, 235, .05);
+}
+
+.faq-item .accordion-button:focus {
+  box-shadow: none;
+  border-color: var(--border);
+}
+
+.faq-item .accordion-button::after {
+  filter: none;
+}
+
+.faq-item .accordion-body {
+  padding: 4px 24px 22px;
+  color: var(--text);
+  line-height: 1.8;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 992px) {
+  .leader-photo-wrapper { margin-bottom: 30px; }
+  .about-hero-section { padding-top: 1px; text-align: left; }
+}
+
+@media (max-width: 768px) {
+  .leadership-section { padding: 50px 0; }
+  .faq-section { padding: 50px 0; }
+}
