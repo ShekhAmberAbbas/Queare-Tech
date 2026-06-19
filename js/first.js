@@ -519,123 +519,123 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-(function () {
+// (function () {
 
 
-const THRESHOLD = 160;
-let blocked = false;
+// const THRESHOLD = 160;
+// let blocked = false;
 
-function isDevToolsOpen() {
-    return (
-        window.outerWidth - window.innerWidth > THRESHOLD ||
-        window.outerHeight - window.innerHeight > THRESHOLD
-    );
-}
+// function isDevToolsOpen() {
+//     return (
+//         window.outerWidth - window.innerWidth > THRESHOLD ||
+//         window.outerHeight - window.innerHeight > THRESHOLD
+//     );
+// }
 
-function blockPage() {
+// function blockPage() {
 
-    if (blocked) return;
-    blocked = true;
+//     if (blocked) return;
+//     blocked = true;
 
-    document.documentElement.innerHTML = `
-    <head>
-        <title>Access Restricted</title>
-    </head>
-    <body style="
-        margin:0;
-        background:#000;
-        color:#ff3b3b;
-        height:100vh;
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        text-align:center;
-        font-family:Arial,sans-serif;
-    ">
-        <div>
-            <h1 style="font-size:70px">⚠ SECURITY ALERT ⚠</h1>
-            <p style="font-size:24px">
-                Unauthorized inspection activity detected.
-            </p>
-            <p style="color:white">
-                Close Developer Tools to continue.
-            </p>
-            <p style="color:#888">
-                Session: ${Date.now()}
-            </p>
-        </div>
-    </body>
-    `;
-}
+//     document.documentElement.innerHTML = `
+//     <head>
+//         <title>Access Restricted</title>
+//     </head>
+//     <body style="
+//         margin:0;
+//         background:#000;
+//         color:#ff3b3b;
+//         height:100vh;
+//         display:flex;
+//         justify-content:center;
+//         align-items:center;
+//         text-align:center;
+//         font-family:Arial,sans-serif;
+//     ">
+//         <div>
+//             <h1 style="font-size:70px">⚠ SECURITY ALERT ⚠</h1>
+//             <p style="font-size:24px">
+//                 Unauthorized inspection activity detected.
+//             </p>
+//             <p style="color:white">
+//                 Close Developer Tools to continue.
+//             </p>
+//             <p style="color:#888">
+//                 Session: ${Date.now()}
+//             </p>
+//         </div>
+//     </body>
+//     `;
+// }
 
-function monitor() {
+// function monitor() {
 
-    if (isDevToolsOpen()) {
-        blockPage();
-    }
+//     if (isDevToolsOpen()) {
+//         blockPage();
+//     }
 
-    if (blocked && !isDevToolsOpen()) {
-        location.reload();
-    }
-}
+//     if (blocked && !isDevToolsOpen()) {
+//         location.reload();
+//     }
+// }
 
-setInterval(monitor, 300);
+// setInterval(monitor, 300);
 
-document.addEventListener("contextmenu", e => {
-    e.preventDefault();
-});
+// document.addEventListener("contextmenu", e => {
+//     e.preventDefault();
+// });
 
-document.addEventListener("keydown", e => {
+// document.addEventListener("keydown", e => {
 
-    const key = e.key.toUpperCase();
+//     const key = e.key.toUpperCase();
 
-    if (
-        key === "F12" ||
-        (e.ctrlKey && e.shiftKey &&
-            ["I", "J", "C", "K"].includes(key)) ||
-        (e.ctrlKey && key === "U")
-    ) {
-        e.preventDefault();
-        blockPage();
-    }
+//     if (
+//         key === "F12" ||
+//         (e.ctrlKey && e.shiftKey &&
+//             ["I", "J", "C", "K"].includes(key)) ||
+//         (e.ctrlKey && key === "U")
+//     ) {
+//         e.preventDefault();
+//         blockPage();
+//     }
 
-});
+// });
 
-setInterval(() => {
+// setInterval(() => {
 
-    const start = performance.now();
+//     const start = performance.now();
 
-    debugger;
+//     debugger;
 
-    const end = performance.now();
+//     const end = performance.now();
 
-    if (end - start > 100) {
-        blockPage();
-    }
+//     if (end - start > 100) {
+//         blockPage();
+//     }
 
-}, 1000);
+// }, 1000);
 
-const bait = new Image();
+// const bait = new Image();
 
-Object.defineProperty(bait, "id", {
-    get() {
-        blockPage();
-        return "";
-    }
-});
+// Object.defineProperty(bait, "id", {
+//     get() {
+//         blockPage();
+//         return "";
+//     }
+// });
 
-setInterval(() => {
-    console.log(bait);
-}, 3000);
+// setInterval(() => {
+//     console.log(bait);
+// }, 3000);
 
-window.addEventListener("resize", () => {
-    if (isDevToolsOpen()) {
-        blockPage();
-    }
-});
+// window.addEventListener("resize", () => {
+//     if (isDevToolsOpen()) {
+//         blockPage();
+//     }
+// });
 
 
-})();
+// })();
 
 
 const timeline = document.querySelector(".timeline");
