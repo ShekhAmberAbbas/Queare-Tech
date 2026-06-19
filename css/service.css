@@ -1,0 +1,396 @@
+/* ==================================================
+   QUAERETECH — SERVICES PAGES SHARED STYLES
+   Used by: summer-internship, in-campus-training,
+   faculty-development-program, vocational-training,
+   full-stack-training
+
+   Builds on top of first.css variables/classes.
+================================================== */
+
+/* ==========================================
+   SERVICE HERO TWEAKS
+========================================== */
+
+.service-hero-section {
+  position: relative;
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding-top: 100px;
+  padding-bottom: 40px;
+}
+
+.service-hero-section .hero-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(148, 163, 184, .1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, .1) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(circle, black 40%, transparent 100%);
+}
+
+.service-hero-image {
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.service-hero-image img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+}
+
+.service-hero-image .hero-image-badge {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  background: rgba(255, 255, 255, .92);
+  backdrop-filter: blur(10px);
+  padding: 14px 22px;
+  border-radius: 16px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  color: var(--heading);
+  box-shadow: var(--shadow);
+}
+
+.service-hero-image .hero-image-badge span {
+  display: block;
+  font-size: .75rem;
+  font-weight: 600;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  margin-bottom: 3px;
+}
+
+/* breadcrumb */
+
+.service-breadcrumb {
+  font-size: .85rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 18px;
+}
+
+.service-breadcrumb a { color: var(--primary); }
+.service-breadcrumb i { font-size: .7rem; margin: 0 6px; }
+
+/* ==========================================
+   QUICK FACTS STRIP
+========================================== */
+
+.quickfacts-section {
+  padding: 40px 0;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
+  border-top: 1px solid var(--border);
+}
+
+.quickfact-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 5px;
+}
+
+.quickfact-icon {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  background: rgba(37, 99, 235, .1);
+  color: var(--primary);
+}
+
+.quickfact-item h6 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: .78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.quickfact-item p {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  color: var(--heading);
+  margin: 0;
+  font-size: 1.02rem;
+}
+
+/* ==========================================
+   PROGRAM HIGHLIGHTS GRID
+========================================== */
+
+.highlights-section { padding: 70px 0; background: var(--bg); }
+
+.highlight-card-pro {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 32px 28px;
+  height: 100%;
+  transition: .4s;
+  box-shadow: var(--shadow-sm);
+}
+
+.highlight-card-pro:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.highlight-card-pro .hc-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, rgba(37,99,235,.12), rgba(6,182,212,.12));
+  color: var(--primary);
+}
+
+.highlight-card-pro h5 { margin-bottom: 10px; font-size: 1.1rem; }
+.highlight-card-pro p { margin: 0; line-height: 1.75; font-size: .95rem; }
+
+/* ==========================================
+   CURRICULUM / MODULES LIST
+========================================== */
+
+.curriculum-section { padding: 70px 0; background: var(--bg-secondary); }
+
+.curriculum-list { display: flex; flex-direction: column; gap: 14px; }
+
+.curriculum-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 20px 24px;
+  transition: .3s;
+}
+
+.curriculum-row:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.curriculum-num {
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: var(--primary);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: .95rem;
+}
+
+.curriculum-text h6 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--heading);
+}
+
+.curriculum-text p { margin: 0; font-size: .93rem; line-height: 1.7; }
+
+/* ==========================================
+   ELIGIBILITY / WHO SHOULD JOIN
+========================================== */
+
+.eligibility-section { padding: 70px 0; background: var(--bg); }
+
+.eligibility-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 30px;
+  height: 100%;
+  text-align: center;
+  transition: .4s;
+}
+
+.eligibility-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
+}
+
+.eligibility-card i {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 16px;
+  display: block;
+}
+
+.eligibility-card h6 {
+  font-family: 'Space Grotesk', sans-serif;
+  margin-bottom: 8px;
+}
+
+.eligibility-card p { margin: 0; font-size: .9rem; }
+
+/* ==========================================
+   OUTCOMES STRIP
+========================================== */
+
+.outcomes-section {
+  padding: 60px 0;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+}
+
+.outcome-pill {
+  background: rgba(255,255,255,.12);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 20px;
+  padding: 28px 20px;
+  text-align: center;
+  height: 100%;
+  transition: .3s;
+}
+
+.outcome-pill:hover { background: rgba(255,255,255,.18); transform: translateY(-5px); }
+
+.outcome-pill i { font-size: 1.7rem; color: #fff; margin-bottom: 12px; display: block; }
+.outcome-pill p { margin: 0; color: #fff; font-weight: 600; font-size: .92rem; }
+
+/* ==========================================
+   FAQ (reuses .faq-section pattern from about)
+========================================== */
+
+.faq-section { padding: 70px 0; background: var(--bg-secondary); }
+
+.faq-item {
+  border: 1px solid var(--border);
+  border-radius: 16px !important;
+  margin-bottom: 14px;
+  overflow: hidden;
+}
+
+.faq-item .accordion-button {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  color: var(--heading);
+  background: var(--card-bg);
+  padding: 20px 24px;
+}
+
+.faq-item .accordion-button:not(.collapsed) {
+  background: rgba(37,99,235,.06);
+  color: var(--primary);
+  box-shadow: none;
+}
+
+.faq-item .accordion-button:focus { box-shadow: none; border-color: var(--border); }
+
+.faq-item .accordion-body {
+  background: var(--card-bg);
+  color: var(--text);
+  line-height: 1.8;
+  padding: 0 24px 22px;
+}
+
+/* ==========================================
+   RELATED PROGRAMS
+========================================== */
+
+.related-section { padding: 70px 0; background: var(--bg); }
+
+.related-card {
+  display: block;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: .4s;
+  height: 100%;
+}
+
+.related-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.related-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.related-card-body { padding: 22px; }
+
+.related-card-body span {
+  font-size: .72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  color: var(--primary);
+}
+
+.related-card-body h6 {
+  font-family: 'Space Grotesk', sans-serif;
+  margin: 8px 0 0;
+  color: var(--heading);
+}
+
+/* ==========================================
+   STICKY APPLY CTA (mobile)
+========================================== */
+
+.sticky-apply-cta {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .sticky-apply-cta {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 998;
+    background: var(--card-bg);
+    border-top: 1px solid var(--border);
+    padding: 14px 20px;
+    box-shadow: 0 -10px 30px rgba(0,0,0,.08);
+  }
+
+  .sticky-apply-cta .btn { width: 100%; }
+
+  body { padding-bottom: 72px; }
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 991px) {
+  .service-hero-image img { height: 320px; margin-top: 40px; }
+  .quickfact-item { justify-content: flex-start; margin-bottom: 10px; }
+}
+
+@media (max-width: 576px) {
+  .highlight-card-pro,
+  .eligibility-card { padding: 24px 20px; }
+  .curriculum-row { flex-direction: column; }
+}
