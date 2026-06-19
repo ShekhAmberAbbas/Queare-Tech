@@ -850,6 +850,8 @@ UNIVERSITY LOGOS
 
 .partner-logo img{
     max-width:120px;
+    width:80px;
+    height:80px;
 }
 
 @keyframes marqueeMove{
