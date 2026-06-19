@@ -313,7 +313,16 @@ document.querySelectorAll(".magnetic-btn").forEach(btn => {
    LOTTIE HERO
 ========================================================= */
 
-
+if (window.lottie) {
+  lottie.loadAnimation({
+    container:  document.getElementById("heroLottie"),
+    renderer:   "svg",
+    loop:       true,
+    autoplay:   true,
+    path:       "https://assets9.lottiefiles.com/packages/lf20_fcfjwiyb.json"
+  });
+  
+}
 
 /* =========================================================
    BLOG LOADER — inline data + GSAP reveal
@@ -489,29 +498,27 @@ console.log("Lenis not loaded");
 
 document.addEventListener("DOMContentLoaded", () => {
 
+    const lottieContainer = document.querySelector("[data-lottie]");
+
+    if (!lottieContainer) return;
+
     if (typeof lottie === "undefined") {
-        console.error("Lottie not loaded");
+        console.error("Lottie library not loaded");
         return;
     }
 
-    document
-    .querySelectorAll("[data-lottie]")
-    .forEach(container => {
+    const animationFile = lottieContainer.dataset.lottie;
 
-        const file =
-        container.dataset.lottie;
-
-        lottie.loadAnimation({
-            container,
-            renderer: "svg",
-            loop: true,
-            autoplay: true,
-            path: `assets/lottie/${file}`
-        });
-
+    lottie.loadAnimation({
+        container: lottieContainer,
+        renderer: "svg",
+        loop: true,
+        autoplay: true,
+        path: `assets/lottie/${animationFile}`
     });
 
 });
+
 (function () {
 
 
