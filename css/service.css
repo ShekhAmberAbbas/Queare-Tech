@@ -394,3 +394,705 @@
   .eligibility-card { padding: 24px 20px; }
   .curriculum-row { flex-direction: column; }
 }
+
+/* =========================================================
+QUAERE TECHNOLOGIES
+ENTERPRISE SERVICES CSS V4.0
+For:
+Summer Internship
+In-Campus Training
+Vocational Training
+FDP
+Full Stack Training
+
+PART 6
+========================================================= */
+
+/* =========================================
+GLOBAL SECTION SPACING
+========================================= */
+
+.domains-section,
+.tracks-section,
+.roadmap-section,
+.project-showcase-section,
+.placement-stats-section,
+.certificate-section,
+.recruiter-skills-section,
+.testimonials-section,
+.university-partners-section,
+.comparison-section,
+.registration-section,
+.batches-section,
+.cta-banner-section{
+    padding:100px 0;
+    position:relative;
+    overflow:hidden;
+}
+
+/* =========================================
+FLOATING SHAPES
+========================================= */
+
+.hero-floating-shape{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(100px);
+    opacity:.25;
+    pointer-events:none;
+}
+
+.shape-1{
+    width:350px;
+    height:350px;
+    background:#2563eb;
+    top:-120px;
+    right:-100px;
+    animation:floatShape 8s ease-in-out infinite;
+}
+
+.shape-2{
+    width:280px;
+    height:280px;
+    background:#06b6d4;
+    bottom:-100px;
+    left:-100px;
+    animation:floatShape 10s ease-in-out infinite;
+}
+
+@keyframes floatShape{
+    0%,100%{
+        transform:translateY(0px);
+    }
+    50%{
+        transform:translateY(-30px);
+    }
+}
+
+/* =========================================
+HERO STATS
+========================================= */
+
+.hero-stats{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.hero-stat{
+    background:rgba(255,255,255,.85);
+    backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,.6);
+    padding:18px 24px;
+    border-radius:20px;
+    min-width:140px;
+    box-shadow:var(--shadow);
+}
+
+.hero-stat h4{
+    margin:0;
+    font-size:1.7rem;
+    font-family:'Space Grotesk',sans-serif;
+    color:var(--primary);
+}
+
+.hero-stat span{
+    font-size:.85rem;
+    color:var(--text);
+}
+
+/* =========================================
+DOMAINS
+========================================= */
+
+.domain-card{
+    height:100%;
+    padding:35px 25px;
+    text-align:center;
+    border-radius:24px;
+    background:var(--card-bg);
+    border:1px solid var(--border);
+    transition:.45s;
+    position:relative;
+    overflow:hidden;
+}
+
+.domain-card::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+    135deg,
+    rgba(37,99,235,.08),
+    rgba(6,182,212,.08));
+    opacity:0;
+    transition:.4s;
+}
+
+.domain-card:hover::before{
+    opacity:1;
+}
+
+.domain-card:hover{
+    transform:translateY(-10px);
+    box-shadow:var(--shadow-lg);
+}
+
+.domain-card i{
+    font-size:2.5rem;
+    color:var(--primary);
+    margin-bottom:18px;
+    display:block;
+}
+
+.domain-card h5{
+    margin:0;
+}
+
+/* =========================================
+TRACKS
+========================================= */
+
+.track-card{
+    background:var(--card-bg);
+    border:1px solid var(--border);
+    border-radius:30px;
+    padding:35px;
+    height:100%;
+    transition:.45s;
+    position:relative;
+}
+
+.track-card:hover{
+    transform:translateY(-10px);
+    box-shadow:var(--shadow-lg);
+}
+
+.featured-track{
+    background:linear-gradient(
+    135deg,
+    var(--primary),
+    var(--secondary));
+    color:#fff;
+    transform:scale(1.03);
+}
+
+.featured-track h3,
+.featured-track span,
+.featured-track li{
+    color:#fff;
+}
+
+.track-header{
+    margin-bottom:25px;
+}
+
+.track-header h3{
+    font-size:2rem;
+    font-family:'Space Grotesk',sans-serif;
+}
+
+.track-card ul{
+    list-style:none;
+    padding:0;
+    margin-bottom:25px;
+}
+
+.track-card li{
+    padding:12px 0;
+    border-bottom:1px solid rgba(0,0,0,.08);
+}
+
+/* =========================================
+ROADMAP
+========================================= */
+
+.roadmap-wrapper{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    position:relative;
+    flex-wrap:wrap;
+}
+
+.roadmap-line{
+    position:absolute;
+    top:42px;
+    left:50px;
+    right:50px;
+    height:4px;
+    background:linear-gradient(
+    90deg,
+    var(--primary),
+    var(--secondary));
+}
+
+.roadmap-step{
+    flex:1;
+    min-width:180px;
+    text-align:center;
+    position:relative;
+    z-index:2;
+}
+
+.roadmap-icon{
+    width:85px;
+    height:85px;
+    border-radius:50%;
+    background:#fff;
+    border:4px solid var(--primary);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:auto auto 20px;
+    font-size:1.8rem;
+    color:var(--primary);
+    box-shadow:var(--shadow);
+}
+
+/* =========================================
+PROJECT SHOWCASE
+========================================= */
+
+.project-card-pro{
+    border-radius:26px;
+    overflow:hidden;
+    background:var(--card-bg);
+    border:1px solid var(--border);
+    transition:.45s;
+    height:100%;
+}
+
+.project-card-pro:hover{
+    transform:translateY(-10px);
+    box-shadow:var(--shadow-lg);
+}
+
+.project-card-pro img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.project-content{
+    padding:24px;
+}
+
+.project-content span{
+    color:var(--primary);
+    font-size:.8rem;
+    font-weight:700;
+    text-transform:uppercase;
+}
+
+.project-content h5{
+    margin-top:10px;
+}
+
+/* =========================================
+PLACEMENT STATS
+========================================= */
+
+.placement-stats-section{
+    background:
+    linear-gradient(
+    135deg,
+    #0f172a,
+    #1e293b);
+}
+
+.stat-card-pro{
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:24px;
+    padding:35px;
+    text-align:center;
+    color:#fff;
+}
+
+.counter-number{
+    font-size:3rem;
+    font-weight:800;
+    font-family:'Space Grotesk';
+    margin-bottom:10px;
+}
+
+/* =========================================
+CERTIFICATE
+========================================= */
+
+.certificate-preview{
+    border-radius:24px;
+    overflow:hidden;
+    box-shadow:var(--shadow-lg);
+}
+
+.certificate-preview img{
+    width:100%;
+}
+
+.certificate-features{
+    margin-top:30px;
+}
+
+.cert-item{
+    display:flex;
+    gap:15px;
+    align-items:center;
+    margin-bottom:18px;
+}
+
+.cert-item i{
+    color:var(--primary);
+    font-size:1.2rem;
+}
+
+/* =========================================
+SKILLS
+========================================= */
+
+.skill-card{
+    text-align:center;
+    padding:30px;
+    border-radius:24px;
+    background:var(--card-bg);
+    border:1px solid var(--border);
+    transition:.4s;
+    height:100%;
+}
+
+.skill-card:hover{
+    transform:translateY(-8px);
+    box-shadow:var(--shadow-lg);
+}
+
+.skill-icon{
+    width:70px;
+    height:70px;
+    border-radius:20px;
+    margin:auto auto 20px;
+    background:rgba(37,99,235,.1);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.skill-icon i{
+    font-size:1.7rem;
+    color:var(--primary);
+}
+
+.matrix-box{
+    padding:35px;
+    border-radius:24px;
+    border:1px solid var(--border);
+    background:var(--card-bg);
+}
+
+/* =========================================
+TESTIMONIALS
+========================================= */
+
+.testimonial-card-pro{
+    background:var(--card-bg);
+    border-radius:28px;
+    padding:35px;
+    border:1px solid var(--border);
+    height:100%;
+}
+
+.rating-stars{
+    color:#f59e0b;
+    font-size:1.2rem;
+    margin-bottom:15px;
+}
+
+.student-info{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-top:25px;
+}
+
+.student-info img{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+/* =========================================
+UNIVERSITY LOGOS
+========================================= */
+
+.logo-marquee{
+    overflow:hidden;
+    position:relative;
+}
+
+.logo-track{
+    display:flex;
+    gap:50px;
+    animation:marqueeMove 25s linear infinite;
+}
+
+.partner-logo{
+    min-width:180px;
+    height:120px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#fff;
+    border-radius:20px;
+    border:1px solid var(--border);
+}
+
+.partner-logo img{
+    max-width:120px;
+}
+
+@keyframes marqueeMove{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(-50%);
+    }
+}
+
+/* =========================================
+COMPARISON TABLE
+========================================= */
+
+.comparison-table{
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.comparison-table th{
+    background:var(--primary);
+    color:#fff;
+    padding:18px;
+}
+
+.comparison-table td{
+    padding:18px;
+    vertical-align:middle;
+}
+
+/* =========================================
+FORM
+========================================= */
+
+.registration-form-card{
+    padding:40px;
+    background:#fff;
+    border-radius:30px;
+    box-shadow:var(--shadow-lg);
+}
+
+.registration-form-card .form-control,
+.registration-form-card .form-select{
+    height:55px;
+    border-radius:14px;
+}
+
+.registration-form-card button{
+    height:55px;
+    border-radius:14px;
+}
+
+/* =========================================
+BATCHES
+========================================= */
+
+.batch-card{
+    background:#fff;
+    border-radius:28px;
+    padding:35px;
+    border:1px solid var(--border);
+    transition:.4s;
+}
+
+.batch-card:hover{
+    transform:translateY(-10px);
+    box-shadow:var(--shadow-lg);
+}
+
+.featured-batch{
+    border:2px solid var(--primary);
+}
+
+.batch-badge{
+    display:inline-block;
+    padding:8px 14px;
+    border-radius:50px;
+    background:rgba(37,99,235,.1);
+    color:var(--primary);
+    font-size:.8rem;
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.seat-left{
+    color:#ef4444;
+    font-weight:700;
+}
+
+/* =========================================
+CTA
+========================================= */
+
+.cta-banner{
+    background:
+    linear-gradient(
+    135deg,
+    var(--primary),
+    var(--secondary));
+    border-radius:36px;
+    padding:70px;
+    color:#fff;
+}
+
+.cta-banner h2{
+    color:#fff;
+    margin-bottom:15px;
+}
+
+/* =========================================
+FOOTER
+========================================= */
+
+.footer-section{
+    background:#0f172a;
+    color:#cbd5e1;
+    padding:100px 0 40px;
+}
+
+.footer-section h5{
+    color:#fff;
+    margin-bottom:25px;
+}
+
+.footer-links,
+.footer-contact{
+    list-style:none;
+    padding:0;
+}
+
+.footer-links li,
+.footer-contact li{
+    margin-bottom:12px;
+}
+
+.footer-links a{
+    color:#cbd5e1;
+    text-decoration:none;
+}
+
+.footer-links a:hover{
+    color:#fff;
+}
+
+.footer-social{
+    display:flex;
+    gap:12px;
+    margin-top:25px;
+}
+
+.footer-social a{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(255,255,255,.08);
+    color:#fff;
+}
+
+.footer-bottom{
+    margin-top:30px;
+}
+
+/* =========================================
+RESPONSIVE
+========================================= */
+
+@media(max-width:991px){
+
+    .roadmap-line{
+        display:none;
+    }
+
+    .roadmap-wrapper{
+        flex-direction:column;
+    }
+
+    .cta-banner{
+        padding:40px;
+        text-align:center;
+    }
+
+    .hero-stats{
+        justify-content:center;
+    }
+}
+
+@media(max-width:768px){
+
+    .hero-stat{
+        width:100%;
+    }
+
+    .track-card{
+        padding:25px;
+    }
+
+    .registration-form-card{
+        padding:25px;
+    }
+
+    .counter-number{
+        font-size:2.2rem;
+    }
+
+    .cta-banner{
+        padding:30px;
+    }
+}
+
+.mouse-glow{
+position:fixed;
+width:300px;
+height:300px;
+background:radial-gradient(
+circle,
+rgba(37,99,235,.15),
+transparent 70%);
+pointer-events:none;
+z-index:0;
+transform:translate(-50%,-50%);
+filter:blur(40px);
+}
+
+.pulse{
+animation:pulseAnimation 1s ease;
+}
+
+@keyframes pulseAnimation{
+
+0%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.08);
+}
+
+100%{
+transform:scale(1);
+}
+
+}
