@@ -15,8 +15,8 @@
 ========================================== */
 
 :root {
-  --primary:       #2563eb;
-  --primary-dark:  #1d4ed8;
+  --primary:       #1b73b7;
+  --primary-dark:  #005495;
   --secondary:     #06b6d4;
   --accent:        #f97316;
   --success:       #22c55e;
@@ -55,6 +55,23 @@ body.dark-mode {
 }
 body {
   user-select: none;
+}
+.text-primary{
+  color : #005495!important;
+}
+.bg-primary{
+  background-color : #005495!important;
+}
+.btn.btn-primary{
+  background-color : #005495!important;
+}
+.btn.btn-outline-primary{
+  border: 1px solid #005495;
+  color:#005495;
+}
+.btn.btn-outline-primary:hover{
+  background-color: #005495;;
+  color: white;
 }
 /* ==========================================
    RESET
@@ -1647,7 +1664,7 @@ body.dark-mode .glass-card { background: rgba(17, 24, 39, .65); }
   .whatsapp-float { width: 55px; height: 55px; font-size: 1.4rem; right: 15px; bottom: 15px; }
 }
 .process-section{
-    padding:120px 0;
+    padding:50px 0;
     background:#fff;
 }
 
@@ -2142,4 +2159,64 @@ body.dark-mode .glass-card { background: rgba(17, 24, 39, .65); }
 
     box-shadow:
     0 20px 50px rgba(0,0,0,.12);
+}
+
+.strategic-pillars-section{
+    position:relative;
+}
+
+.section-subtitle{
+    max-width:700px;
+    margin:15px auto 0;
+    color:#6b7280;
+}
+
+.pillar-card{
+    position:relative;
+    background:#fff;
+    border-radius:24px;
+    padding:40px 30px;
+    text-align:center;
+    overflow:hidden;
+    height:100%;
+    transition:.4s ease;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+
+.pillar-card:hover{
+    transform:translateY(-10px);
+}
+
+.pillar-number{
+    position:absolute;
+    top:10px;
+    right:20px;
+    font-size:80px;
+    font-weight:800;
+    color:rgba(37,99,235,.06);
+    line-height:1;
+}
+
+.pillar-icon{
+    width:70px;
+    height:70px;
+    margin:0 auto 20px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(37,99,235,.08);
+    color:#2563eb;
+    font-size:28px;
+}
+
+.pillar-card h5{
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.pillar-card p{
+    color:#6b7280;
+    margin:0;
+    line-height:1.8;
 }
