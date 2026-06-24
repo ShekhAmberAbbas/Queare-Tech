@@ -1163,3 +1163,482 @@ transform:scale(1);
 .cta-actions .btn{
     min-width:230px;
 }
+
+/* ==========================================
+   IMPACT SECTION
+========================================== */
+
+.impact-section{
+    position:relative;
+    overflow:hidden;
+    padding:120px 0;
+    background:
+    radial-gradient(circle at top left,#0f172a,#020617);
+}
+
+/* Floating Orbs */
+
+.impact-bg-orb{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(100px);
+    animation:floatOrb 12s infinite ease-in-out;
+}
+
+.orb-1{
+    width:350px;
+    height:350px;
+    background:#3b82f6;
+    top:-100px;
+    left:-100px;
+}
+
+.orb-2{
+    width:280px;
+    height:280px;
+    background:#8b5cf6;
+    right:-80px;
+    top:100px;
+}
+
+.orb-3{
+    width:250px;
+    height:250px;
+    background:#06b6d4;
+    bottom:-100px;
+    left:40%;
+}
+
+@keyframes floatOrb{
+    50%{
+        transform:translateY(-40px);
+    }
+}
+
+/* Heading */
+
+.impact-tag{
+    display:inline-block;
+    padding:10px 18px;
+    border-radius:100px;
+    color:#fff;
+    background:rgba(255,255,255,.1);
+    backdrop-filter:blur(10px);
+}
+
+.impact-title{
+    color:#fff;
+    font-size:clamp(2.4rem,5vw,4rem);
+    font-weight:800;
+    margin-top:20px;
+}
+
+.impact-title span{
+    background:linear-gradient(
+    90deg,
+    #60a5fa,
+    #a855f7,
+    #06b6d4);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.impact-subtitle{
+    color:#94a3b8;
+    max-width:700px;
+    margin:auto;
+}
+
+/* Cards */
+
+.impact-card{
+    position:relative;
+    text-align:center;
+    padding:40px 25px;
+    border-radius:30px;
+
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.5s;
+    overflow:hidden;
+}
+
+.impact-card::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:
+    linear-gradient(
+    135deg,
+    rgba(59,130,246,.15),
+    rgba(168,85,247,.15));
+
+    opacity:0;
+    transition:.5s;
+}
+
+.impact-card:hover{
+    transform:translateY(-15px);
+    border-color:#60a5fa;
+}
+
+.impact-card:hover::before{
+    opacity:1;
+}
+
+.impact-icon{
+    width:80px;
+    height:80px;
+    margin:auto;
+
+    border-radius:20px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:32px;
+
+    color:white;
+
+    background:
+    linear-gradient(
+    135deg,
+    #3b82f6,
+    #8b5cf6);
+
+    box-shadow:
+    0 15px 35px rgba(59,130,246,.4);
+}
+
+/* Counter */
+
+.counter-number{
+    font-size:3rem;
+    font-weight:800;
+    margin-top:25px;
+
+    background:
+    linear-gradient(
+    90deg,
+    #60a5fa,
+    #a855f7);
+
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.counter-number::after{
+    content:"+";
+}
+
+/* Text */
+
+.impact-card h6{
+    color:white;
+    margin-top:15px;
+    font-size:1rem;
+    letter-spacing:.5px;
+}
+
+
+.modern-matrix{
+    position:relative;
+    padding:35px;
+    border-radius:28px;
+
+    background:rgba(255,255,255,.75);
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.3);
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,.08);
+
+    overflow:hidden;
+
+    transition:.4s ease;
+}
+
+.modern-matrix:hover{
+    transform:translateY(-10px);
+}
+
+.modern-matrix::before{
+    content:'';
+
+    position:absolute;
+
+    width:250px;
+    height:250px;
+
+    background:
+    radial-gradient(
+    rgba(13,110,253,.15),
+    transparent);
+
+    top:-100px;
+    right:-100px;
+}
+
+.matrix-header{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-bottom:25px;
+}
+
+.matrix-icon{
+    width:60px;
+    height:60px;
+
+    border-radius:18px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:24px;
+    color:white;
+
+    background:
+    linear-gradient(
+    135deg,
+    #0d6efd,
+    #6f42c1);
+}
+
+.matrix-header h5{
+    margin:0;
+    font-weight:700;
+}
+
+.skill-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.skill-tags span{
+
+    padding:10px 18px;
+
+    border-radius:100px;
+
+    background:white;
+
+    border:1px solid #e9ecef;
+
+    font-size:.92rem;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.skill-tags span:hover{
+
+    background:
+    linear-gradient(
+    135deg,
+    #0d6efd,
+    #6f42c1);
+
+    color:white;
+
+    transform:translateY(-3px);
+}
+
+
+.enrollment-section{
+    padding:120px 0;
+    background:
+    linear-gradient(135deg,#f8fbff,#eef5ff);
+    position:relative;
+    overflow:hidden;
+}
+
+.enrollment-section::before{
+    content:"";
+    position:absolute;
+    width:600px;
+    height:600px;
+    border-radius:50%;
+    background:rgba(13,110,253,.08);
+    top:-250px;
+    right:-200px;
+}
+
+.enrollment-content{
+    position:relative;
+    z-index:2;
+}
+
+.enrollment-content .section-title{
+    font-size:3rem;
+    font-weight:800;
+    line-height:1.2;
+    margin:20px 0;
+}
+
+.enrollment-content .section-title span{
+    color:#0d6efd;
+}
+
+.enrollment-stats{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+    margin:40px 0;
+}
+
+.stat-box{
+    background:#fff;
+    border-radius:20px;
+    padding:20px;
+    text-align:center;
+    box-shadow:0 15px 40px rgba(0,0,0,.06);
+}
+
+.stat-box h3{
+    color:#0d6efd;
+    font-weight:800;
+    margin:0;
+}
+
+.feature-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.feature-card{
+    background:#fff;
+    border-radius:18px;
+    padding:18px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+}
+
+.feature-card i{
+    color:#0d6efd;
+    font-size:22px;
+}
+
+.enrollment-form-card{
+    background:rgba(255,255,255,.85);
+    backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,.5);
+    border-radius:30px;
+    padding:40px;
+    box-shadow:0 25px 60px rgba(0,0,0,.08);
+}
+
+.form-header{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-bottom:35px;
+}
+
+.badge-icon{
+    width:70px;
+    height:70px;
+    border-radius:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(135deg,#0d6efd,#4e9dff);
+    color:#fff;
+    font-size:28px;
+}
+
+.floating-group{
+    position:relative;
+    margin-bottom:24px;
+}
+
+.floating-group input,
+.floating-group textarea,
+.floating-group select{
+    width:100%;
+    border:none;
+    background:#fff;
+    border-radius:15px;
+    padding:18px 16px;
+    outline:none;
+    box-shadow:0 8px 20px rgba(0,0,0,.05);
+}
+
+.floating-group label{
+    position:absolute;
+    left:16px;
+    top:18px;
+    color:#777;
+    pointer-events:none;
+    transition:.3s;
+}
+
+.floating-group input:focus + label,
+.floating-group input:valid + label,
+.floating-group textarea:focus + label,
+.floating-group textarea:not(:placeholder-shown)+label{
+    top:-10px;
+    left:12px;
+    background:#fff;
+    padding:0 8px;
+    font-size:12px;
+    color:#0d6efd;
+}
+
+.enroll-btn{
+    width:100%;
+    border:none;
+    border-radius:18px;
+    padding:18px;
+    background:linear-gradient(135deg,#0d6efd,#4e9dff);
+    color:#fff;
+    font-size:18px;
+    font-weight:700;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    transition:.4s;
+}
+
+.enroll-btn:hover{
+    transform:translateY(-3px);
+}
+
+.form-footer{
+    display:flex;
+    justify-content:space-between;
+    margin-top:20px;
+    color:#666;
+    font-size:14px;
+}
+
+@media(max-width:768px){
+
+    .enrollment-stats{
+        grid-template-columns:1fr;
+    }
+
+    .feature-grid{
+        grid-template-columns:1fr;
+    }
+
+    .enrollment-content .section-title{
+        font-size:2rem;
+    }
+
+    .enrollment-form-card{
+        padding:25px;
+    }
+}

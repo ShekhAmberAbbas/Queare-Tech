@@ -207,3 +207,4 @@ console.log(
   "%cQuaere Pages Animation Layer Loaded ✨",
   "color:#06b6d4;font-size:14px;font-weight:bold;"
 );
+

@@ -783,3 +783,78 @@ gsap.utils.toArray(".timeline-image").forEach(img => {
     });
 
 });
+
+const button = document.querySelector(".arrow-float");
+
+if(button){
+
+    window.addEventListener("scroll", () => {
+
+        if(window.scrollY > 300){
+            button.style.display = "flex";
+        }else{
+            button.style.display = "none";
+        }
+
+    });
+
+    button.addEventListener("click", () => {
+
+        window.scrollTo({
+            top:0,
+            behavior:"smooth"
+        });
+
+    });
+
+}
+
+const techTrack = document.querySelector(".tech-track");
+
+if(techTrack){
+
+    document.querySelectorAll(".tech-item").forEach(item => {
+
+        item.addEventListener("mouseenter", () => {
+            techTrack.style.animationPlayState = "paused";
+        });
+
+        item.addEventListener("mouseleave", () => {
+            techTrack.style.animationPlayState = "running";
+        });
+
+    });
+
+}
+
+const institutionSwiper = new Swiper(".institutionSwiper",{
+
+    loop:true,
+    speed:1000,
+
+    centeredSlides:true,
+
+    autoplay:{
+        delay:3500,
+        disableOnInteraction:false
+    },
+
+    pagination:{
+        el:".institution-pagination",
+        clickable:true
+    },
+
+    breakpoints:{
+        0:{
+            slidesPerView:1
+        },
+        768:{
+            slidesPerView:2
+        },
+        1200:{
+            slidesPerView:3
+        }
+    }
+
+});
+
