@@ -1331,9 +1331,7 @@ transform:scale(1);
     color:transparent;
 }
 
-.counter-number::after{
-    content:"+";
-}
+
 
 /* Text */
 

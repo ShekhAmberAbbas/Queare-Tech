@@ -269,64 +269,57 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
-    /* =========================================
-    COUNTERS
-    ========================================= */
 
-    const counters =
-        document.querySelectorAll(".counter-number");
+    document.addEventListener("DOMContentLoaded", () => {
 
-    const counterObserver =
-        new IntersectionObserver((entries) => {
+    const counters = document.querySelectorAll(".counter-number");
 
-            entries.forEach(entry => {
+    const observer = new IntersectionObserver((entries) => {
 
-                if (!entry.isIntersecting) return;
+        entries.forEach(entry => {
 
-                const counter = entry.target;
+            if (!entry.isIntersecting) return;
 
-                const target =
-                    parseInt(
-                        counter.dataset.target
-                    );
+            const counter = entry.target;
+            const target = Number(counter.dataset.target);
+            const suffix = counter.dataset.suffix || "";
 
-                let current = 0;
+            let current = 0;
+            const increment = target / 100;
 
-                const increment =
-                    target / 100;
+            function updateCounter() {
 
-                const update = () => {
+                current += increment;
 
-                    current += increment;
+                if (current < target) {
 
-                    if (current < target) {
+                    counter.innerText =
+                        Math.floor(current).toLocaleString() + suffix;
 
-                        counter.innerText =
-                            Math.floor(current);
+                    requestAnimationFrame(updateCounter);
 
-                        requestAnimationFrame(update);
+                } else {
 
-                    } 
-                    else {
+                    counter.innerText =
+                        target.toLocaleString() + suffix;
 
-                        counter.innerText =
-                            target + "+";
+                }
+            }
 
-                    }
+            updateCounter();
 
-                };
-
-                update();
-
-                counterObserver.unobserve(counter);
-
-            });
+            observer.unobserve(counter);
 
         });
 
-    counters.forEach(counter =>
-        counterObserver.observe(counter)
-    );
+    }, {
+        threshold: 0.5
+    });
+
+    counters.forEach(counter => observer.observe(counter));
+
+});
+
 
     /* =========================================
     MAGNETIC BUTTONS
@@ -573,50 +566,3 @@ document.addEventListener("DOMContentLoaded", () => {
 /* =========================================================
 END OF FILE
 ========================================================= */
-
-
-
-document.addEventListener("DOMContentLoaded", () => {
-
-    const counters = document.querySelectorAll(".counter-number");
-
-    const observer = new IntersectionObserver((entries)=>{
-
-        entries.forEach(entry=>{
-
-            if(entry.isIntersecting){
-
-                const counter = entry.target;
-                const target = +counter.dataset.target;
-
-                let count = 0;
-
-                const update = ()=>{
-
-                    const increment = target / 100;
-
-                    count += increment;
-
-                    if(count < target){
-                        counter.innerText = Math.floor(count);
-                        requestAnimationFrame(update);
-                    }else{
-                        counter.innerText = target.toLocaleString();
-                    }
-
-                };
-
-                update();
-                observer.unobserve(counter);
-
-            }
-
-        });
-
-    },{threshold:.5});
-
-    counters.forEach(counter=>{
-        observer.observe(counter);
-    });
-
-});
