@@ -306,7 +306,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
                         requestAnimationFrame(update);
 
-                    } else {
+                    } 
+                    else {
 
                         counter.innerText =
                             target + "+";
