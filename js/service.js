@@ -268,59 +268,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
     }
-
-
-    document.addEventListener("DOMContentLoaded", () => {
-
-    const counters = document.querySelectorAll(".counter-number");
-
-    const observer = new IntersectionObserver((entries) => {
-
-        entries.forEach(entry => {
-
-            if (!entry.isIntersecting) return;
-
-            const counter = entry.target;
-            const target = Number(counter.dataset.target);
-            const suffix = counter.dataset.suffix || "";
-
-            let current = 0;
-            const increment = target / 100;
-
-            function updateCounter() {
-
-                current += increment;
-
-                if (current < target) {
-
-                    counter.innerText =
-                        Math.floor(current).toLocaleString() + suffix;
-
-                    requestAnimationFrame(updateCounter);
-
-                } else {
-
-                    counter.innerText =
-                        target.toLocaleString() + suffix;
-
-                }
-            }
-
-            updateCounter();
-
-            observer.unobserve(counter);
-
-        });
-
-    }, {
-        threshold: 0.5
-    });
-
-    counters.forEach(counter => observer.observe(counter));
-
-});
-
-
     /* =========================================
     MAGNETIC BUTTONS
     ========================================= */
@@ -566,3 +513,54 @@ document.addEventListener("DOMContentLoaded", () => {
 /* =========================================================
 END OF FILE
 ========================================================= */
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const counters = document.querySelectorAll(".counter-number");
+
+    const observer = new IntersectionObserver((entries) => {
+
+        entries.forEach(entry => {
+
+            if (!entry.isIntersecting) return;
+
+            const counter = entry.target;
+            const target = Number(counter.dataset.target);
+            const suffix = counter.dataset.suffix || "";
+
+            let current = 0;
+            const increment = target / 100;
+
+            function updateCounter() {
+
+                current += increment;
+
+                if (current < target) {
+
+                    counter.innerText =
+                        Math.floor(current).toLocaleString() + suffix;
+
+                    requestAnimationFrame(updateCounter);
+
+                } else {
+
+                    counter.innerText =
+                        target.toLocaleString() + suffix;
+
+                }
+            }
+
+            updateCounter();
+
+            observer.unobserve(counter);
+
+        });
+
+    }, {
+        threshold: 0.5
+    });
+
+    counters.forEach(counter => observer.observe(counter));
+
+});
