@@ -616,7 +616,7 @@ body.dark-mode .custom-navbar {
 
 .experience-card {
   position: absolute;
-  top: 30px;
+  top: -30px;
   left: -40px;
   background: var(--card-bg);
   padding: 25px;
