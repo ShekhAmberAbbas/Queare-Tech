@@ -3040,3 +3040,75 @@ transform:scale(1.4);
 }
 
 
+.blogSwiper{
+    padding:15px 5px 60px;
+}
+
+.blog-card{
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    border-radius:18px;
+    overflow:hidden;
+    background:#fff;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.blog-card:hover{
+    transform:translateY(-8px);
+}
+
+.blog-image{
+    height:220px;
+    overflow:hidden;
+}
+
+.blog-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.blog-content{
+    padding:22px;
+    display:flex;
+    flex-direction:column;
+    flex:1;
+}
+
+.blog-title{
+    height:60px;
+    overflow:hidden;
+
+    display:-webkit-box;
+    -webkit-line-clamp:2;
+    -webkit-box-orient:vertical;
+
+    font-weight:700;
+}
+
+.blog-text{
+
+    height:72px;
+    overflow:hidden;
+
+    display:-webkit-box;
+    -webkit-line-clamp:3;
+    -webkit-box-orient:vertical;
+
+    margin:15px 0;
+    color:#666;
+}
+
+.blog-btn{
+
+    margin-top:auto;
+
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+
+    text-decoration:none;
+    font-weight:600;
+}
