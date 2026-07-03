@@ -57,8 +57,30 @@
   color: var(--heading);
   box-shadow: var(--shadow);
 }
+.service-hero-image .hero-image-badge2 {
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+  background: rgba(255, 255, 255, .92);
+  backdrop-filter: blur(10px);
+  padding: 14px 22px;
+  border-radius: 16px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  color: var(--heading);
+  box-shadow: var(--shadow);
+}
 
 .service-hero-image .hero-image-badge span {
+  display: block;
+  font-size: .75rem;
+  font-weight: 600;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  margin-bottom: 3px;
+}
+.service-hero-image .hero-image-badge2 span {
   display: block;
   font-size: .75rem;
   font-weight: 600;
@@ -1852,8 +1874,36 @@ HERO IMAGE
     font-weight:700;
 
 }
+.hero-image-badge2{
+
+    position:absolute;
+
+    bottom:25px;
+
+    left:25px;
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:18px 22px;
+
+    box-shadow:var(--shadow);
+
+    font-weight:700;
+
+}
 
 .hero-image-badge span{
+
+    display:block;
+
+    color:var(--primary);
+
+    font-size:1.1rem;
+
+}
+.hero-image-badge2 span{
 
     display:block;
 
