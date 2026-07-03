@@ -564,3 +564,153 @@ document.addEventListener("DOMContentLoaded", () => {
     counters.forEach(counter => observer.observe(counter));
 
 });
+
+gsap.utils.toArray(".highlight-card-pro").forEach((card,index)=>{
+
+    gsap.from(card,{
+
+        y:80,
+        opacity:0,
+        duration:0.9,
+        delay:index*0.08,
+        ease:"power3.out",
+
+        scrollTrigger:{
+            trigger:card,
+            start:"top 85%"
+        }
+
+    });
+
+});
+
+gsap.from(".faq-stat",{
+
+    y:60,
+    opacity:0,
+    duration:1,
+    stagger:.2,
+
+    scrollTrigger:{
+        trigger:".faq-info",
+        start:"top 80%"
+    }
+
+});
+
+gsap.from(".premium-faq .accordion-item",{
+
+    x:80,
+    opacity:0,
+    duration:.8,
+    stagger:.15,
+
+    scrollTrigger:{
+        trigger:".premium-faq",
+        start:"top 75%"
+    }
+
+});
+/*====================================
+ECOSYSTEM SECTION
+====================================*/
+
+gsap.from(".eco-card",{
+
+    y:80,
+    opacity:0,
+    duration:1,
+    stagger:.15,
+
+    scrollTrigger:{
+        trigger:".ecosystem-wrapper",
+        start:"top 75%"
+    }
+
+});
+
+gsap.from(".benefit-box",{
+
+    scale:.8,
+    opacity:0,
+    duration:.7,
+    stagger:.1,
+
+    scrollTrigger:{
+        trigger:".benefits-grid",
+        start:"top 80%"
+    }
+
+});
+
+gsap.from(".center-ring",{
+
+    scale:0,
+    opacity:0,
+    duration:1.3,
+    ease:"back.out(1.8)",
+
+    scrollTrigger:{
+        trigger:".eco-center",
+        start:"top 80%"
+    }
+
+});
+
+/* Floating animation */
+
+gsap.to(".eco1",{
+
+    y:-12,
+
+    duration:3,
+
+    repeat:-1,
+
+    yoyo:true,
+
+    ease:"sine.inOut"
+
+});
+
+gsap.to(".eco2",{
+
+    y:12,
+
+    duration:3.4,
+
+    repeat:-1,
+
+    yoyo:true,
+
+    ease:"sine.inOut"
+
+});
+
+gsap.to(".eco3",{
+
+    y:-10,
+
+    duration:3.2,
+
+    repeat:-1,
+
+    yoyo:true,
+
+    ease:"sine.inOut"
+
+});
+
+gsap.to(".eco4",{
+
+    y:10,
+
+    duration:3.6,
+
+    repeat:-1,
+
+    yoyo:true,
+
+    ease:"sine.inOut"
+
+});

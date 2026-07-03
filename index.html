@@ -104,6 +104,7 @@
 
 <link rel="stylesheet" href="css/first.css">
 <link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/footer2.css">
 
 </head>
 
@@ -1908,7 +1909,7 @@ Educational Growth Partner
 
   </div>
 </footer>
- <footer class="quaere-footer" role="contentinfo">
+ <footer class="quaere-footer " role="contentinfo">
 
   <hr>
     <!-- ── Navigation row ───────────────────────────────────────────────
@@ -1923,49 +1924,25 @@ Educational Growth Partner
     </div> -->
 
     <!-- ── Hero text (hover to reveal) ───────────────────────────────── -->
-    <div class="qf-hero " id="qfHero" aria-hidden="true">
+   <div class="qf-hero" id="qfHero">
 
-      <!-- Layer 1: Faint, always visible (the "ghost" hint) -->
-      <svg class="qf-hero-base" viewBox="0 0 1000 178" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <filter id="grain-base" x="-2%" y="-2%" width="104%" height="104%">
-            <feTurbulence type="fractalNoise" baseFrequency="1" numOctaves="4" stitchTiles="stitch" result="noise"/>
-            <feComposite in="SourceGraphic" in2="noise" operator="in"/>
-          </filter>
-        </defs>
-        <text
-          x="0" y="168"
-          font-size="178"
-          font-weight="900"
-          font-family="'rajdhani', sans-serif;"
-          textLength="1000"
-          lengthAdjust="spacingAndGlyphs"
-          filter="url(#grain-base)"
-        >QUAERE</text>
-      </svg>
+    <!-- Ghost Logo -->
+    <img
+        src="assets/images/QuaereText2.png"
+        class="qf-logo-base"
+        alt="Quaere">
 
-      <!-- Layer 2: Bright, revealed only at the cursor via radial mask -->
-      <div class="qf-reveal-wrap" id="qfReveal">
-        <svg viewBox="0 0 1000 178" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <filter id="grain-reveal" x="-2%" y="-2%" width="104%" height="104%">
-              <feTurbulence type="fractalNoise" baseFrequency="1" numOctaves="4" stitchTiles="stitch" result="noise"/>
-              <feComposite in="SourceGraphic" in2="noise" operator="in"/>
-            </filter>
-          </defs>
-          <text
-            x="0" y="168"
-            font-size="178"
-            font-weight="900"
-            font-family="'rajdhani', sans-serif;"
-            textLength="1000"
-            lengthAdjust="spacingAndGlyphs"
-            filter="url(#grain-reveal)"
-          >QUAERE</text>
-        </svg>
-      </div>
+    <!-- Reveal Logo -->
+    <div class="qf-reveal-wrap" id="qfReveal">
+
+        <img
+            src="assets/images/QuaereText2.png"
+            class="qf-logo-reveal"
+            alt="Quaere">
 
     </div>
+
+</div>
 
     <!-- ── Bottom bar ─────────────────────────────────────────────────── -->
     <!-- <div class="qf-divider"></div>

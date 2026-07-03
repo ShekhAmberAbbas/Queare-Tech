@@ -1,0 +1,59 @@
+.qf-hero{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding: 40px 0;
+    cursor: crosshair;
+}
+
+/* Background Logo */
+.qf-logo-base{
+    display: block;
+    width: 100%;
+    max-width: 1700px;
+    margin: auto;
+
+    opacity: 0.2;   /* Increased from 0.08 */
+
+    filter:grayscale(100%);
+
+    user-select: none;
+    pointer-events: none;
+}
+
+/* Reveal Area */
+.qf-reveal-wrap{
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    mask-image: radial-gradient(circle at -999px -999px,#000 0%,transparent 0%);
+    -webkit-mask-image: radial-gradient(circle at -999px -999px,#000 0%,transparent 0%);
+}
+
+/* Reveal Logo */
+.qf-logo-reveal{
+    width:100%;
+    max-width:1700px;
+
+    user-select:none;
+    pointer-events:none;
+
+    filter:none;
+}
+
+/* Responsive */
+@media (max-width:768px){
+
+    .qf-logo-base,
+    .qf-logo-reveal{
+        max-width:95%;
+    }
+
+    .qf-hero{
+        padding:25px 0;
+    }
+}
