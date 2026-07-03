@@ -59,8 +59,10 @@
 }
 .service-hero-image .hero-image-badge2 {
   position: absolute;
-  bottom: 25px;
-  right: 25px;
+  top: 5px;
+  left: 50%;
+  width: 50%;
+  height: 20%;
   background: rgba(255, 255, 255, .92);
   backdrop-filter: blur(10px);
   padding: 14px 22px;
@@ -274,6 +276,175 @@
 /* ==========================================
    OUTCOMES STRIP
 ========================================== */
+/* ===========================
+   Premium Animated Heading
+=========================== */
+
+.outcome-heading{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    text-align:center;
+    margin-bottom:55px;
+    font-family: 'Poppins', sans-serif;
+}
+
+@media (max-width:1200px){
+    .outcome-heading span{
+        font-size:2.5rem;
+    }
+}
+
+/* Tablet */
+@media (max-width:992px){
+    .outcome-heading span{
+        font-size:2rem;
+        white-space:normal;
+    }
+}
+
+.outcome-heading span{
+    display:inline-block;
+    font-family:'Poppins',sans-serif;
+    font-size:clamp(1.6rem, 2.8vw, 3rem);   /* Smaller size */
+    font-weight:800;
+    line-height:1.2;
+    letter-spacing:1px;                     /* Reduced spacing */
+    text-transform:uppercase;
+    white-space:nowrap;                     /* Force one line on desktop */
+
+    background:linear-gradient(
+        90deg,
+        #ffffff,
+        #b8f4ff,
+        #00e5ff,
+        #ffffff
+    );
+    background-size:300% auto;
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    animation:gradientMove 6s linear infinite;
+}
+/* Shine Effect */
+.outcome-heading span::before{
+    content: "";
+    position: absolute;
+    top: -20%;
+    left: -40%;
+    width: 35%;
+    height: 160%;
+    background: rgba(255,255,255,.45);
+    transform: skewX(-25deg);
+    filter: blur(10px);
+    animation: shine 4s infinite;
+}
+
+/* Animated Underline */
+.outcome-heading::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -18px;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 5px;
+    border-radius: 50px;
+    background: linear-gradient(90deg,#00c6ff,#00ffd5,#0072ff);
+    background-size: 300%;
+    animation: underlineMove 3s linear infinite;
+    box-shadow: 0 0 18px rgba(0,198,255,.7);
+}
+
+/* Decorative Dots */
+.outcome-heading::before{
+    content: "✦";
+    position: absolute;
+    left: 50%;
+    top: -35px;
+    transform: translateX(-50%);
+    color: #00e5ff;
+    font-size: 22px;
+    animation: pulseStar 2s infinite;
+}
+
+/* Gradient Animation */
+@keyframes gradientMove{
+    0%{
+        background-position: 0%;
+    }
+    100%{
+        background-position: 400%;
+    }
+}
+
+/* Floating */
+@keyframes floatText{
+    0%,100%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-6px);
+    }
+}
+
+/* Shine Sweep */
+@keyframes shine{
+    0%{
+        left:-45%;
+        opacity:0;
+    }
+    20%{
+        opacity:1;
+    }
+    60%{
+        left:120%;
+        opacity:0;
+    }
+    100%{
+        left:120%;
+        opacity:0;
+    }
+}
+
+/* Underline Animation */
+@keyframes underlineMove{
+    from{
+        background-position:0%;
+    }
+    to{
+        background-position:300%;
+    }
+}
+
+/* Star Pulse */
+@keyframes pulseStar{
+    0%,100%{
+        transform:translateX(-50%) scale(1);
+        opacity:.6;
+    }
+    50%{
+        transform:translateX(-50%) scale(1.35);
+        opacity:1;
+    }
+}
+
+@media(max-width:768px){
+
+    .outcome-heading span{
+         font-size:1.6rem;
+        line-height:1.35;
+        letter-spacing:.5px;
+        white-space:normal;
+    }
+
+    .outcome-heading::after{
+        width:80px;
+        height:4px;
+    }
+
+}
 
 .outcomes-section {
   padding: 60px 0;
