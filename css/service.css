@@ -3040,3 +3040,138 @@ grid-template-columns:1fr;
 }
 
 }
+
+/*=========================================
+      Premium Modern Sub Heading
+=========================================*/
+
+.modern-subheading{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:18px;
+    margin:0 auto 45px;
+    font-family:'Poppins',sans-serif;
+    overflow:hidden;
+}
+
+.modern-subheading::before,
+.modern-subheading::after{
+    content:"";
+    width:80px;
+    height:2px;
+    border-radius:50px;
+    background:linear-gradient(90deg,
+        transparent,
+        #00e5ff,
+        #7df9ff,
+        transparent);
+    animation:lineGlow 3s linear infinite;
+}
+
+.modern-subheading span{
+    position:relative;
+    display:inline-block;
+
+    /* One-third size of H1 */
+    font-size:clamp(0.95rem,1.2vw,1.3rem);
+
+    font-weight:700;
+    letter-spacing:4px;
+    text-transform:uppercase;
+
+    background:linear-gradient(
+        90deg,
+        #1d076c,
+        #1d076cbb,
+        #1d076c77,
+        #1d076c19
+    );
+    background-size:300% auto;
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    animation:
+        gradientFlow 6s linear infinite,
+        floatSub 4s ease-in-out infinite;
+}
+
+/* Small glowing dot */
+.modern-subheading span::after{
+    content:"";
+    position:absolute;
+    left:50%;
+    bottom:-10px;
+    transform:translateX(-50%);
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:#1e2dd2;
+    box-shadow:
+        0 0 8px #00e5ff,
+        0 0 18px #00e5ff,
+        0 0 30px #00e5ff;
+    animation:pulseDot 2s infinite;
+}
+
+@keyframes gradientFlow{
+    from{
+        background-position:0%;
+    }
+    to{
+        background-position:300%;
+    }
+}
+
+@keyframes lineGlow{
+    0%{
+        opacity:.4;
+        transform:scaleX(.8);
+    }
+    50%{
+        opacity:1;
+        transform:scaleX(1);
+    }
+    100%{
+        opacity:.4;
+        transform:scaleX(.8);
+    }
+}
+
+@keyframes pulseDot{
+    0%,100%{
+        transform:translateX(-50%) scale(1);
+    }
+    50%{
+        transform:translateX(-50%) scale(1.5);
+    }
+}
+
+@keyframes floatSub{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-3px);
+    }
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    .modern-subheading{
+        gap:10px;
+    }
+
+    .modern-subheading::before,
+    .modern-subheading::after{
+        width:40px;
+    }
+
+    .modern-subheading span{
+        letter-spacing:2px;
+    }
+
+}
