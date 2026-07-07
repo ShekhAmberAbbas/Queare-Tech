@@ -10,7 +10,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>QuaereTech | AI-First Digital Engineering Company</title>
+<title>QuaereTech | A CMMI level 3 Company</title>
 
 <meta name="description"
   content="QuaereTech helps enterprises build AI-powered software, cloud-native platforms, ERP systems, LMS solutions, analytics dashboards and digital transformation products.">
@@ -104,6 +104,7 @@
 <link rel="stylesheet" href="css/first.css">
 <link rel="stylesheet" href="css/pages.css">
 <link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/footer2.css">
 
 </head>
 
@@ -206,6 +207,7 @@
          </div>
          </ul>
        </li>
+       
         <li class="nav-item dropdown">
          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
            Services<i class="fa-solid fa-angle-down"></i>
@@ -215,15 +217,15 @@
            <div>
              <li><a class="dropdown-item" href="summer-internship.html">Summer Training / Internship</a></li>
              <li><hr class="dropdown-divider"></li>
-             <li><a class="dropdown-item" href="#">In-Campus Training</a></li>
+             <li><a class="dropdown-item" href="in-campus-training.html">In-Campus Training</a></li>
              <li><hr class="dropdown-divider"></li>
-             <li><a class="dropdown-item" href="#">Faculty Development Program</a></li>
+             <li><a class="dropdown-item" href="faculty-development-program.html">Faculty Development Program</a></li>
              <li><hr class="dropdown-divider"></li>
             </div>
             <div>
-              <li><a class="dropdown-item" href="#">Vocational Training</a></li>
+              <li><a class="dropdown-item" href="vocational-training.html">Vocational Training</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Full Stack Training</a></li>
+              <li><a class="dropdown-item" href="fullstack.html">Full Stack Training</a></li>
               <li><hr class="dropdown-divider"></li>
              
           </div>
@@ -231,6 +233,8 @@
          </div>
          </ul>
        </li>
+
+
         <li class="nav-item dropdown">
          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
            AI Courses<i class="fa-solid fa-angle-down"></i>
@@ -857,7 +861,8 @@ View Leadership Profiles
 
   </div>
 </footer>
- <footer class="quaere-footer" role="contentinfo">
+
+   <footer class="quaere-footer " role="contentinfo">
 
   <hr>
     <!-- ── Navigation row ───────────────────────────────────────────────
@@ -872,49 +877,25 @@ View Leadership Profiles
     </div> -->
 
     <!-- ── Hero text (hover to reveal) ───────────────────────────────── -->
-    <div class="qf-hero " id="qfHero" aria-hidden="true">
+   <div class="qf-hero" id="qfHero">
 
-      <!-- Layer 1: Faint, always visible (the "ghost" hint) -->
-      <svg class="qf-hero-base" viewBox="0 0 1000 178" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <filter id="grain-base" x="-2%" y="-2%" width="104%" height="104%">
-            <feTurbulence type="fractalNoise" baseFrequency="1" numOctaves="4" stitchTiles="stitch" result="noise"/>
-            <feComposite in="SourceGraphic" in2="noise" operator="in"/>
-          </filter>
-        </defs>
-        <text
-          x="0" y="168"
-          font-size="178"
-          font-weight="900"
-          font-family="'Arial Black', Impact, 'Helvetica Neue', sans-serif"
-          textLength="1000"
-          lengthAdjust="spacingAndGlyphs"
-          filter="url(#grain-base)"
-        >QUAERE</text>
-      </svg>
+    <!-- Ghost Logo -->
+    <img
+        src="assets/images/QuaereText2.png"
+        class="qf-logo-base"
+        alt="Quaere">
 
-      <!-- Layer 2: Bright, revealed only at the cursor via radial mask -->
-      <div class="qf-reveal-wrap" id="qfReveal">
-        <svg viewBox="0 0 1000 178" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <filter id="grain-reveal" x="-2%" y="-2%" width="104%" height="104%">
-              <feTurbulence type="fractalNoise" baseFrequency="1" numOctaves="4" stitchTiles="stitch" result="noise"/>
-              <feComposite in="SourceGraphic" in2="noise" operator="in"/>
-            </filter>
-          </defs>
-          <text
-            x="0" y="168"
-            font-size="178"
-            font-weight="900"
-            font-family="'Arial Black', Impact, 'Helvetica Neue', sans-serif"
-            textLength="1000"
-            lengthAdjust="spacingAndGlyphs"
-            filter="url(#grain-reveal)"
-          >QUAERE</text>
-        </svg>
-      </div>
+    <!-- Reveal Logo -->
+    <div class="qf-reveal-wrap" id="qfReveal">
+
+        <img
+            src="assets/images/QuaereText2.png"
+            class="qf-logo-reveal"
+            alt="Quaere">
 
     </div>
+
+</div>
 
     <!-- ── Bottom bar ─────────────────────────────────────────────────── -->
     <!-- <div class="qf-divider"></div>
@@ -935,6 +916,7 @@ View Leadership Profiles
 
   </footer>
 
+
 <!-- ========================================= -->
 <!-- SCRIPTS -->
 <!-- ========================================= -->
@@ -949,6 +931,7 @@ View Leadership Profiles
 <script src="js/first.js"></script>
 <script src="js/pages.js"></script>
 <script src="js/footer.js"></script>
+<script src="js/footer2.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/embla-carousel/embla-carousel.umd.js"></script>
 
 <script>
