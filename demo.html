@@ -375,3 +375,341 @@
 
 </body>
 </html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Java Certification Card — Preview</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Karla:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap">
+
+<style>
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: #ECEEF3;
+    font-family: 'Karla', -apple-system, sans-serif;
+  }
+  .preview-stage {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 64px 20px;
+  }
+  .card-slot { width: 100%; max-width: 400px; }
+
+  /* =====================================================================
+     QUAERE — "Full Stack Development in Java" certification card
+     ---------------------------------------------------------------------
+     The palette and the one signature touch are grounded in Java's own
+     coffee-cup mark: a warm roast/ember gradient in the header, with a
+     quiet curl of "steam" rising behind the logo badge (pure CSS, no
+     markup changes required). Everything else — chips, stars, button —
+     stays plain and disciplined, so that touch stays the memorable part.
+
+     Drop this whole block into your stylesheet as-is. Your HTML/classes
+     don't need to change at all — see the one note near .cert-logo.
+     ===================================================================== */
+
+  .cert-card {
+    --cc-roast:       #2B211D;
+    --cc-roast-soft:  #6E5D54;
+    --cc-ember:       #AC4222;
+    --cc-ember-deep:  #7A2E1C;
+    --cc-amber:       #E8A33D;
+    --cc-foam:        #FFFDF9;
+    --cc-line:        rgba(43, 33, 29, .10);
+    --cc-star-muted:  #DED4CB;
+    --cc-radius-lg:   22px;
+    --cc-radius-full: 999px;
+    --cc-ease: cubic-bezier(.22, 1, .36, 1);
+    --cc-dur: .5s;
+    --cc-shadow-rest:  0 1px 2px rgba(43,33,29,.05),
+                       0 10px 24px -8px rgba(43,33,29,.12),
+                       0 28px 56px -24px rgba(43,33,29,.16);
+    --cc-shadow-hover: 0 2px 4px rgba(43,33,29,.07),
+                       0 18px 36px -10px rgba(172,66,34,.30),
+                       0 46px 70px -26px rgba(122,46,28,.40);
+
+    font-family: 'Karla', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--cc-foam);
+    border: 1px solid var(--cc-line);
+    border-radius: var(--cc-radius-lg);
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--cc-shadow-rest);
+    transition: transform var(--cc-dur) var(--cc-ease), box-shadow var(--cc-dur) var(--cc-ease);
+  }
+
+  .cert-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--cc-shadow-hover);
+  }
+
+  /* ---------------------------- header ---------------------------- */
+  .cert-header {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    padding: 32px 24px 28px;
+  }
+
+  .java-bg {
+    background: radial-gradient(130% 130% at 14% 12%, var(--cc-amber) 0%, var(--cc-ember) 48%, var(--cc-ember-deep) 100%);
+  }
+
+  .cert-header .row { position: relative; z-index: 2; }
+
+  .cert-header h4 {
+    margin: 0;
+    color: var(--cc-foam);
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    text-shadow: 0 1px 3px rgba(0,0,0,.22);
+  }
+  .cert-header h4:nth-of-type(1),
+  .cert-header h4:nth-of-type(2) {
+    font-size: .95rem;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+  .cert-header h4:nth-of-type(3) {
+    font-size: .68rem;
+    font-weight: 600;
+    opacity: .82;
+    margin-top: 8px;
+    letter-spacing: 1.2px;
+  }
+
+  /* Logo badge — sized/centered to work whether this is your real <img>
+     or an icon font, like the stand-in used below. */
+  .cert-logo {
+    position: relative;
+    z-index: 2;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--cc-foam);
+    color: var(--cc-ember);
+    border-radius: 50%;
+    font-size: 1.5rem;
+    object-fit: contain;
+    padding: 8px;
+    box-shadow: 0 8px 18px rgba(43,33,29,.28);
+  }
+
+  /* Signature touch: a soft curl of steam behind the badge, echoing
+     Java's coffee-cup mark. Built as pseudo-elements on the header/column
+     rather than the logo itself, since ::before/::after don't reliably
+     render on <img> — this way it works no matter which one you use. */
+  .cert-header::before {
+    content: "";
+    position: absolute;
+    top: 26px;
+    left: 46px;
+    width: 4px;
+    height: 22px;
+    border-radius: 50%;
+    background: linear-gradient(to top, transparent, rgba(255,253,249,.6) 55%, transparent);
+    filter: blur(1.5px);
+    rotate: -7deg;
+    z-index: 1;
+    animation: cc-steam 5s ease-in infinite;
+  }
+  .cert-header .col-3 { position: relative; }
+  .cert-header .col-3::before,
+  .cert-header .col-3::after {
+    content: "";
+    position: absolute;
+    width: 4px;
+    border-radius: 50%;
+    background: linear-gradient(to top, transparent, rgba(255,253,249,.6) 55%, transparent);
+    filter: blur(1.5px);
+    z-index: 1;
+    animation: cc-steam 5s ease-in infinite;
+  }
+  .cert-header .col-3::before { top: 4px; left: 42%; height: 20px; rotate: 5deg;  animation-delay: 1.2s; }
+  .cert-header .col-3::after  { top: 8px; left: 62%; height: 16px; rotate: -4deg; animation-delay: 2.4s; }
+
+  @keyframes cc-steam {
+    0%   { opacity: 0;  translate: 0 0;      scale: 1;   }
+    20%  { opacity: .7; }
+    60%  { opacity: .3; translate: 0 -20px; scale: 1.3; }
+    100% { opacity: 0;  translate: 0 -32px; scale: 1.5; }
+  }
+
+  /* ---------------------------- body ---------------------------- */
+  .cert-body {
+    padding: 24px 24px 22px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cert-body h3 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 700;
+    font-size: 1.22rem;
+    line-height: 1.3;
+    color: var(--cc-roast);
+    margin: 0 0 16px;
+  }
+
+  .cert-body .duration {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    width: fit-content;
+    margin: 0 0 20px;
+    padding: 7px 14px;
+    border-radius: var(--cc-radius-full);
+    background: rgba(172, 66, 34, .08);
+    color: var(--cc-roast-soft);
+    font-size: .76rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+  }
+  .cert-body .duration span {
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    color: var(--cc-ember);
+    font-weight: 700;
+    text-transform: none;
+    letter-spacing: 0;
+  }
+
+  .cert-body .review-text {
+    display: block;
+    font-size: .68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--cc-roast-soft);
+    margin-bottom: 8px;
+  }
+
+  .cert-body .fa-star.text-warning   { color: var(--cc-amber); font-size: .85rem; }
+  .cert-body .fa-star.text-secondary { color: var(--cc-star-muted); font-size: .85rem; }
+
+  .cert-body .rating {
+    margin-left: 6px;
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    font-weight: 600;
+    font-size: .82rem;
+    color: var(--cc-roast);
+  }
+
+  .cert-body > .d-flex {
+    margin-top: auto;
+    padding-top: 18px;
+    border-top: 1px solid var(--cc-line);
+  }
+
+  .cert-body .view-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 9px 18px;
+    border-radius: var(--cc-radius-full);
+    border: 1.5px solid var(--cc-ember);
+    color: var(--cc-ember);
+    font-weight: 700;
+    font-size: .82rem;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background var(--cc-dur) var(--cc-ease),
+                color var(--cc-dur) var(--cc-ease),
+                box-shadow var(--cc-dur) var(--cc-ease),
+                letter-spacing var(--cc-dur) var(--cc-ease);
+  }
+  .cert-body .view-btn:hover {
+    background: linear-gradient(135deg, var(--cc-amber), var(--cc-ember));
+    color: var(--cc-foam);
+    letter-spacing: .3px;
+    box-shadow: 0 10px 20px -6px rgba(172,66,34,.5);
+  }
+  .cert-body .view-btn:focus-visible {
+    outline: 2px solid var(--cc-ember);
+    outline-offset: 3px;
+  }
+
+  /* ---------------------------- responsive ---------------------------- */
+  @media (max-width: 420px) {
+    .cert-header  { padding: 26px 20px 22px; }
+    .cert-body    { padding: 20px 20px 18px; }
+    .cert-body h3 { font-size: 1.12rem; }
+  }
+
+  /* ---------------------------- reduced motion ---------------------------- */
+  @media (prefers-reduced-motion: reduce) {
+    .cert-header::before,
+    .cert-header .col-3::before,
+    .cert-header .col-3::after { animation: none; opacity: 0; }
+    .cert-card, .cert-body .view-btn { transition: none; }
+    .cert-card:hover { transform: none; }
+  }
+</style>
+</head>
+<body>
+
+<main class="preview-stage">
+  <div class="card-slot">
+
+    <div class="cert-card">
+
+        <!-- Header -->
+        <div class="cert-header java-bg">
+            <div class="row align-items-center">
+                <div class="col-3">
+                    <!-- Preview stand-in for your real:
+                         <img src="assets/logos/java.svg" class="img-fluid cert-logo" alt="Java">
+                         Swap this <i> back for that tag — .cert-logo styles either one the same way. -->
+                    <i class="fab fa-java cert-logo" aria-hidden="true"></i>
+                </div>
+                <div class="col-9">
+                    <h4>FULL STACK DEVELOPMENT</h4>
+                    <h4>IN JAVA</h4>
+                    <h4>CERTIFICATION PROGRAM</h4>
+                </div>
+            </div>
+        </div>
+
+        <!-- Body -->
+        <div class="cert-body">
+            <h3>Full Stack Development In JAVA</h3>
+
+            <p class="duration">Duration <span>06 Months</span></p>
+
+            <small class="review-text">Reviews</small>
+
+            <div class="d-flex justify-content-between align-items-center mt-2">
+                <div>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="far fa-star text-secondary"></i>
+                    <span class="rating">4.8 (14,500)</span>
+                </div>
+                <a href="#" class="view-btn" aria-label="View more about the Full Stack Development in Java certification">View More →</a>
+            </div>
+        </div>
+
+    </div>
+
+  </div>
+</main>
+
+</body>
+</html>
