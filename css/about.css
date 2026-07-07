@@ -207,7 +207,7 @@
 
 @media (max-width: 992px) {
   .leader-photo-wrapper { margin-bottom: 30px; }
-  .about-hero-section { padding-top: 1px; text-align: left; }
+  .about-hero-section { padding-top: 70px; text-align: left; }
 }
 
 @media (max-width: 768px) {
