@@ -565,24 +565,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-gsap.utils.toArray(".highlight-card-pro").forEach((card,index)=>{
 
-    gsap.from(card,{
-
-        y:80,
-        opacity:0,
-        duration:0.9,
-        delay:index*0.08,
-        ease:"power3.out",
-
-        scrollTrigger:{
-            trigger:card,
-            start:"top 85%"
-        }
-
-    });
-
-});
 
 gsap.from(".faq-stat",{
 
