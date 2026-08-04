@@ -219,11 +219,11 @@ card.style.transform="perspective(1000px) rotateX(0) rotateY(0)";
 
   /* ---------- Terminal spec card: typewriter-style line reveal ---------- */
   const specLines = [
-    { k: 'liveSessions', v: '94', t: 'num' },
+    { k: 'liveSessions', v: '120', t: 'num' },
     { k: 'projects', v: '12', t: 'num' },
-    { k: 'language', v: 'Hindi + English', t: 'str' },
+    { k: 'language', v: 'Bilingual', t: 'str' },
     { k: 'skillLevel', v: 'Beginner → Advanced', t: 'str' },
-    { k: 'mode', v: 'Online (Live)', t: 'str' },
+    { k: 'mode', v: 'Offline', t: 'str' },
     { k: 'certificate', v: 'true', t: 'bool' },
     { k: 'placementAssistance', v: 'true', t: 'bool' },
     { k: 'doubtSupport', v: '1:1 Mentor', t: 'str' },
