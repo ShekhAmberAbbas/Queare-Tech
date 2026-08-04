@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Full Stack Web Development — MERN | Quaere Tech Hub</title>
+
+<meta name="description" content="Full Stack Web Development — MERN track by Quaere Tech Hub. Go from HTML basics to shipping production-grade MongoDB, Express, React & Node.js applications — live, mentor-led, with placement assistance built in.">
+<meta name="theme-color" content="#2563eb">
+<link rel="shortcut icon" href="assets/logos/favicon.png" type="image/x-icon">
+
+<!-- FONTS (kept from source page: Sora / Manrope / JetBrains Mono) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+  rel="stylesheet">
+
+<!-- ========================================= -->
+<!-- BOOTSTRAP -->
+<!-- ========================================= -->
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- ========================================= -->
+<!-- ICONS -->
+<!-- ========================================= -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<!-- ========================================= -->
+<!-- SWIPER -->
+<!-- ========================================= -->
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+<!-- ========================================= -->
+<!-- AOS -->
+<!-- ========================================= -->
+
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+<!-- ========================================= -->
+<!-- STYLE -->
+<!-- ========================================= -->
+
+<link rel="stylesheet" href="css/first.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/footer2.css">
+<link rel="stylesheet" href="css/service.css">
+<link rel="stylesheet" href="css/pages.css">
+<link rel="stylesheet" href="css/fullstackmern.css">
+</head>
+<body>
+
+<!-- ========================================= -->
+<!-- PRELOADER -->
+<!-- ========================================= -->
+
+<div id="preloader">
+  <div class="loader-container">
+
+    <div class="loader-logo">
+      <span>Quaere</span> Tech Hub
+    </div>
+
+    <div class="loader-circle">
+      <svg width="120" height="120">
+        <circle cx="60" cy="60" r="50" stroke-width="6" fill="none" class="loader-track"/>
+        <circle cx="60" cy="60" r="50" stroke-width="6" fill="none" class="loader-progress-circle"/>
+      </svg>
+      <div id="loaderPercent">0%</div>
+    </div>
+
+    <p class="loader-text">Engineering Future With AI</p>
+
+  </div>
+</div>
+
+<!-- ========================================= -->
+<!-- SCROLL PROGRESS -->
+<!-- ========================================= -->
+
+<div id="scroll-progress"></div>
+
+<!-- ========================================= -->
+<!-- FLOATING BLOBS -->
+<!-- ========================================= -->
+
+<div class="blob blob-1"></div>
+<div class="blob blob-2"></div>
+<div class="blob blob-3"></div>
+
+<!-- ========================================= -->
+<!-- WHATSAPP FLOAT -->
+<!-- ========================================= -->
+
+<a href="https://wa.me/919196586951" class="whatsapp-float" target="_blank">
+  <i class="bi bi-whatsapp"></i>
+</a>
+<a href="#" class="arrow-float ">
+  <i class="bi bi-arrow-up-circle"></i>
+</a>
+<!-- ========================================= -->
+<!-- NAVBAR -->
+<!-- ========================================= -->
+
+<nav class="navbar navbar-expand-lg custom-navbar fixed-top">
+  <div class="container">
+
+    <a class="navbar-brand" href="index.html">
+      <img src="assets/images/logo.png" alt="QuaereTech Logo" height="40">
+    </a>
+
+    <button class="navbar-toggler" type="button"
+      data-bs-toggle="collapse" data-bs-target="#mainMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainMenu">
+
+      <ul class="navbar-nav mx-auto">
+         <li class="nav-item dropdown">
+         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           About<i class="fa-solid fa-angle-down"></i>
+         </a>
+         <ul class="dropdown-menu border-0">
+         <div class="d-none d-lg-flex gap-3">
+           <div>
+             <li><a class="dropdown-item" href="about.html">About Quaere</a></li>
+             <li><hr class="dropdown-divider"></li>
+             <li><a class="dropdown-item" href="founder-message.html">Founder Director's Message</a></li>
+             <li><hr class="dropdown-divider"></li>
+             <li><a class="dropdown-item" href="training-head.html">Training Head's Message</a></li>
+             <li><hr class="dropdown-divider"></li>
+             <li><a class="dropdown-item" href="our-experts.html">Our Experts</a></li>
+             <li><hr class="dropdown-divider"></li>
+            </div>
+            <div>
+              <li><a class="dropdown-item" href="our-association.html">Our Association</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="directors-message.html">Director's Message</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="leadership-team.html">Leadership Team</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="institutional-alliances.html">Institutional Alliances </a></li>
+              <li><hr class="dropdown-divider"></li>
+          </div>
+          <img class="w-50 d-none d-lg-block " src="assets/images/Qbuilding.png" alt="">
+         </div>
+         <div class="d-block d-lg-none gap-3">
+           <div>
+             <li><a class="dropdown-item" href="about.html">About Quaere</a></li>
+             <li><hr class="dropdown-divider"></li>
+             <li><a class="dropdown-item" href="our-association.html">Our Association</a></li>
+             <li><hr class="dropdown-divider"></li>
+             <li><a class="dropdown-item" href="founder-message.html">Founder Director's Message</a></li>
+             <li><hr class="dropdown-divider"></li>
+             <li><a class="dropdown-item" href="directors-message.html">Director's Message</a></li>
+             <li><hr class="dropdown-divider"></li>
+             <li><a class="dropdown-item" href="training-head.html">Training Head's Message</a></li>
+             <li><hr class="dropdown-divider"></li>
+             <li><a class="dropdown-item" href="leadership-team.html">Leadership Team</a></li>
+             <li><hr class="dropdown-divider"></li>
+             <li><a class="dropdown-item" href="our-experts.html">Our Experts</a></li>
+             <li><hr class="dropdown-divider"></li>
+             <li><a class="dropdown-item" href="institutional-alliances.html">Institutional Alliances </a></li>
+            </div>
+          <img class="w-50 d-none d-lg-block " src="assets/images/Qbuilding.png" alt="">
+         </div>
+         </ul>
+       </li>
+        <li class="nav-item dropdown">
+         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           Services<i class="fa-solid fa-angle-down"></i>
+         </a>
+         <ul class="dropdown-menu border-0">
+         <div class="d-none d-lg-flex gap-3">
+           <div>
+             <li><a class="dropdown-item" href="summer-internship.html">Summer Training / Internship</a></li>
+             <li><hr class="dropdown-divider"></li>
+             <li><a class="dropdown-item" href="in-campus-training.html">In-Campus Training</a></li>
+             <li><hr class="dropdown-divider"></li>
+             <li><a class="dropdown-item" href="faculty-development-program.html">Faculty Development Program</a></li>
+             <li><hr class="dropdown-divider"></li>
+            </div>
+            <div>
+              <li><a class="dropdown-item" href="vocational-training.html">Vocational Training</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="fullstack.html">Full Stack Training</a></li>
+              <li><hr class="dropdown-divider"></li>
+             
+          </div>
+          <img class="w-50 d-none d-lg-block" src="assets/images/services.png" alt="">
+         </div>
+         <div class="d-block d-lg-none gap-3">
+           <div>
+             <li><a class="dropdown-item" href="summer-internship.html">Summer Training / Internship</a></li>
+             <li><hr class="dropdown-divider"></li>
+             <li><a class="dropdown-item" href="vocational-training.html">Vocational Training</a></li>
+             <li><hr class="dropdown-divider"></li>
+             <li><a class="dropdown-item" href="in-campus-training.html">In-Campus Training</a></li>
+             <li><hr class="dropdown-divider"></li>
+             <li><a class="dropdown-item" href="fullstack.html">Full Stack Training</a></li>
+             <li><hr class="dropdown-divider"></li>
+             <li><a class="dropdown-item" href="faculty-development-program.html">Faculty Development Program</a></li>
+            </div>
+          <img class="w-50 d-none d-lg-block" src="assets/images/services.png" alt="">
+         </div>
+         </ul>
+       </li>
+        <li class="nav-item dropdown">
+         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           AI Courses<i class="fa-solid fa-angle-down"></i>
+         </a>
+         <ul class="dropdown-menu border-0">
+         <div class="d-none d-lg-flex gap-3">
+           <div>
+             <li><a class="dropdown-item" href="#">Data Science</a></li>
+             <li><hr class="dropdown-divider"></li>
+             <li><a class="dropdown-item" href="#">AI Foundations</a></li>
+             <li><hr class="dropdown-divider"></li>
+             <li><a class="dropdown-item" href="#">Business Intelligence & Data Analysis</a></li>
+             <li><hr class="dropdown-divider"></li>
+            </div>
+            <div>
+              <li><a class="dropdown-item" href="#">Full-Stack AI</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">AI for Professionals</a></li>
+              <li><hr class="dropdown-divider"></li>
+             
+          </div>
+          <img class="w-50 d-none d-lg-block" src="assets/images/aicourses.gif" alt="">
+         </div>
+         <div class="d-block d-lg-none gap-3">
+           <div>
+             <li><a class="dropdown-item" href="#">Data Science</a></li>
+             <li><hr class="dropdown-divider"></li>
+             <li><a class="dropdown-item" href="#">Full-Stack AI</a></li>
+             <li><hr class="dropdown-divider"></li>
+             <li><a class="dropdown-item" href="#">AI Foundations</a></li>
+             <li><hr class="dropdown-divider"></li>
+             <li><a class="dropdown-item" href="#">AI for Professionals</a></li>
+             <li><hr class="dropdown-divider"></li>
+             <li><a class="dropdown-item" href="#">Business Intelligence & Data Analysis</a></li>
+            </div>
+          <img class="w-50 d-none d-lg-block" src="assets/images/aicourses.gif" alt="">
+         </div>
+         </ul>
+       </li>
+
+        <li class="nav-item"><a class="nav-link" href="reachus.html">Reach Us</a></li>
+      </ul>
+
+      <div class="d-flex align-items-center gap-3">
+        <!-- <button id="themeToggle" class="theme-toggle">
+          <i class="bi bi-moon-stars-fill"></i>
+        </button> -->
+        <a href="#contact" class="btn btn-outline-primary">Enquire Now</a>
+        <a href="https://www.quaeretech.com/TrainingRegistrationForm" class="btn btn-primary magnetic-btn">Register Here</a>
+      </div>
+
+    </div>
+
+  </div>
+</nav>
+
+<!-- ========================================= -->
+<!-- SERVICE HERO -->
+<!-- ========================================= -->
+
+<section class="service-hero-section py-5 mt-5">
+
+<div class="hero-grid"></div>
+
+<div class="container pt-4">
+
+<div class="row align-items-center">
+
+<div class="col-lg-7 my-auto">
+
+
+
+
+
+<div class="hero-badge">
+<i class="bi bi-tools"></i>
+Industry Ready Skills Program
+</div>
+
+<h1 class="hero-title">
+Build Skills.<br>
+Earn Certification.<br>
+Launch Your Career.
+</h1>
+
+<p class="hero-description text-justify">
+Hands-on vocational training designed to bridge
+the gap between education and employment through
+practical learning, industry projects and expert mentoring.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#overview"
+class="btn btn-primary magnetic-btn">
+
+Program 
+Overview
+
+</a>
+
+<a href="https://www.quaeretech.com/TrainingRegistrationForm"
+class="btn btn-outline-primary">
+
+Enroll Now
+
+</a>
+
+</div>
+
+
+
+
+</div>
+
+<div class="col-lg-5 my-auto">
+
+<div class="service-hero-image">
+
+<img src="assets/images/fullstackmernhero.jpg" style="object-fit: contain; background-color: rgb(6, 6, 32);">
+
+
+  <div class="hero-image-badge">
+
+<span>Outcome Focused</span>
+
+Industry Skills Training
+
+</div>
+<div class="hero-image-badge2">
+
+<span>Also Known</span>
+
+Fullstack Training
+
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ========================================= QUICKFACTS ========================================= -->
+<section class="quickfacts-section">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-3 col-md-6">
+        <div class="quickfact-item">
+          <div class="quickfact-icon"><i class="bi bi-clock-history"></i></div>
+          <div><h6>Duration</h6><p>6 Months</p></div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="quickfact-item">
+          <div class="quickfact-icon"><i class="bi bi-laptop"></i></div>
+          <div><h6>Mode</h6><p>Offline</p></div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="quickfact-item">
+          <div class="quickfact-icon"><i class="bi bi-person-workspace"></i></div>
+          <div><h6>Guide</h6><p>Abhishek Shukla</p></div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="quickfact-item">
+          <div class="quickfact-icon"><i class="bi bi-patch-check"></i></div>
+          <div><h6>Certificate</h6><p>Yes, on completion</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================= ABOUT THIS COURSE ========================================= -->
+<section class="about-section" id="overview">
+  <div class="container">
+    <div class="row align-items-center g-5">
+
+      <div class="col-lg-6" data-aos="fade-right">
+        <div class="about-image-wrapperr">
+          <div class="code-mock">
+            <div class="bar">
+              <div class="dot" style="background:#ff5f56"></div>
+              <div class="dot" style="background:#ffbd2e"></div>
+              <div class="dot" style="background:#27c93f"></div>
+            </div>
+           <img src="assets/images/mernabout.png" alt="">
+          </div>
+          <div class="experience-card top-left"><h2>6</h2><p>Months</p></div>
+          <div class="project-card bottom-left"><h2>12</h2><p>PROJECTS</p></div>
+        </div>
+      </div>
+
+      <div class="col-lg-6" data-aos="fade-left">
+        <span class="section-tag">ABOUT THIS COURSE</span>
+        <h2 class="section-title">Full Stack, End to End, Portfolio-Ready</h2>
+
+        <p class="section-text text-justify">The MERN track takes you from writing your first line of HTML to deploying a full production web application, using the same stack — MongoDB, Express, React and Node.js — that powers products at companies like Meta, Uber and Airbnb. Every module pairs live instruction with a real feature you build yourself, so by graduation your portfolio is doing the talking for you.</p>
+
+        <p class="section-text text-justify">Cohorts are capped and mentor-led, with weekly code reviews, 1:1 doubt sessions, and a capstone project built alongside a hiring-partner brief.</p>
+
+        <div class="about-highlights">
+          <div class="highlight-item"><i class="bi bi-check-circle-fill"></i><span>Live Mentor-Led Sessions</span></div>
+          <div class="highlight-item"><i class="bi bi-check-circle-fill"></i><span>Placement Assistance</span></div>
+          <div class="highlight-item"><i class="bi bi-check-circle-fill"></i><span>Industry Certificate</span></div>
+          <div class="highlight-item"><i class="bi bi-check-circle-fill"></i><span>Real Capstone Project</span></div>
+        </div>
+
+        <a href="https://www.quaeretech.com/TrainingRegistrationForm" class="btn btn-primary mt-3 magnetic-btn">Enroll now →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========================================= WHAT YOU'LL LEARN ========================================= -->
+<section class="highlights-section">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="section-tag">CURRICULUM SKILLS</span>
+      <h2 class="section-title">What You'll Learn</h2>
+      <p class="section-subtitle mx-auto">Eight practical skill areas, each tied directly to a shippable feature you build during the course.</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-lg-3 col-md-6" data-aos="fade-up">
+        <div class="highlight-card-pro">
+          <div class="hc-icon"><i class="bi bi-code-slash"></i></div>
+          <h5>HTML5 &amp; CSS</h5>
+          <p>Semantic HTML5, modern CSS &amp; responsive layouts.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="50">
+        <div class="highlight-card-pro">
+          <div class="hc-icon"><i class="bi bi-lightning-charge-fill"></i></div>
+          <h5>Modern JavaScript</h5>
+          <p>JavaScript ES6+, async programming &amp; the DOM.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="highlight-card-pro">
+          <div class="hc-icon"><i class="bi bi-diagram-3-fill"></i></div>
+          <h5>React &amp; Hooks</h5>
+          <p>Building component-driven UIs with React &amp; Hooks.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="150">
+        <div class="highlight-card-pro">
+          <div class="hc-icon"><i class="bi bi-boxes"></i></div>
+          <h5>State Management</h5>
+          <p>State management with Redux Toolkit &amp; Context API.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6" data-aos="fade-up">
+        <div class="highlight-card-pro">
+          <div class="hc-icon"><i class="bi bi-hdd-network-fill"></i></div>
+          <h5>REST APIs</h5>
+          <p>REST API design with Node.js &amp; Express.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="50">
+        <div class="highlight-card-pro">
+          <div class="hc-icon"><i class="bi bi-shield-lock-fill"></i></div>
+          <h5>Auth &amp; Security</h5>
+          <p>Authentication &amp; authorization using JWT.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="highlight-card-pro">
+          <div class="hc-icon"><i class="bi bi-database-fill"></i></div>
+          <h5>Databases</h5>
+          <p>Schema design &amp; queries with MongoDB &amp; Mongoose.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="150">
+        <div class="highlight-card-pro">
+          <div class="hc-icon"><i class="bi bi-cloud-arrow-up-fill"></i></div>
+          <h5>Deployment</h5>
+          <p>Deploying full-stack apps with CI/CD pipelines.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================= SYLLABUS ========================================= -->
+<section class="curriculum-section" id="curriculum">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="section-tag">SYLLABUS</span>
+      <h2 class="section-title">Eight Modules, Each Ending In A Shippable Feature</h2>
+      <p class="section-subtitle mx-auto">Click a module to see what's inside.</p>
+    </div>
+
+    <div class="accordion custom-accordion" id="curriculumAccordion"></div>
+  </div>
+</section>
+
+<!-- ========================================= TRAINER ========================================= -->
+<section class="trainer-section pt-5">
+
+    <div class="container">
+
+        <div class="text-center mb-5" data-aos="fade-up">
+
+            <span class="section-tag">
+                YOUR GUIDE
+            </span>
+
+            <h2 class="section-title">
+                Learn Straight From Someone Who Builds This For A Living
+            </h2>
+
+            <p class="section-subtitle">
+                Industry mentor with real-world development experience, helping you build production-ready applications.
+            </p>
+
+        </div>
+
+        <div class="trainer-card" data-aos="zoom-in">
+
+            <div class="row align-items-center">
+
+                <!-- Left -->
+
+                <div class="col-lg-3">
+
+                    <div class="trainer-image rounded-circle p-3 shadow-lg">
+
+                        <img src="assets/person/tlopsq.jpg" class="rounded-circle" alt="">
+
+                    </div>
+
+                </div>
+
+                <!-- Right -->
+
+                <div class="col-lg-8">
+
+                    <div class="trainer-content">
+
+                        <h3>
+                            Abhishek Shukla
+                        </h3>
+
+                        <h6>
+                            Team Lead • Open Source
+                        </h6>
+
+                        <p>
+
+Specializing in open-source technologies, full-stack development, and enterprise-grade software development. Passionate about scalable architecture, clean code, cloud deployment, mentoring developers, and delivering production-ready applications.
+
+                        </p>
+
+                        <div class="trainer-skills d-flex justify-content-between pb-3 align-items-center">
+
+                            <span class="rounded-pill bg-white px-3 py-1 shadow-lg">React</span>
+
+                            <span class="rounded-pill bg-white px-3 py-1 shadow-lg">Node.js</span>
+
+                            <span class="rounded-pill bg-white px-3 py-1 shadow-lg">MongoDB</span>
+
+                            <span class="rounded-pill bg-white px-3 py-1 shadow-lg">Express</span>
+
+                            <span class="rounded-pill bg-white px-3 py-1 shadow-lg">Docker</span>
+
+                            <span class="rounded-pill bg-white px-3 py-1 shadow-lg">AWS</span>
+
+                            <span class="rounded-pill bg-white px-3 py-1 shadow-lg">CI/CD</span>
+
+                        </div>
+
+                        <div class="trainer-stats d-flex justify-content-between pb-4">
+
+                            <div class="rounded-3 bg-white px-5 py-2 shadow-lg">
+
+                                <h4>8+</h4>
+
+                                <small>Years</small>
+
+                            </div>
+
+                            <div class="rounded-3 bg-white px-5 py-2 shadow-lg">
+
+                                <h4>120+</h4>
+
+                                <small>Projects</small>
+
+                            </div>
+
+                            <div class="rounded-3 bg-white px-5 py-2 shadow-lg">
+
+                                <h4>5000+</h4>
+
+                                <small>Students</small>
+
+                            </div>
+
+                        </div>
+
+                        <div class="trainer-social bg-light rounded-pill py-2 shadow-lg w-50 mx-auto d-flex justify-content-evenly">
+
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+
+                            <a href="#"><i class="fab fa-github"></i></a>
+
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ========================================= COURSE FEATURES ========================================= -->
+<section class="domains-section">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="section-tag">COURSE FEATURES</span>
+      <h2 class="section-title">Everything Included In This Track</h2>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-lg-3 col-md-6" data-aos="fade-up">
+        <div class="domain-card"><div class="di"><i class="bi bi-broadcast"></i></div><h5>Live Sessions</h5><p>94 sessions</p></div>
+      </div>
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="50">
+        <div class="domain-card"><div class="di"><i class="bi bi-kanban-fill"></i></div><h5>Projects</h5><p>12 projects</p></div>
+      </div>
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="domain-card"><div class="di"><i class="bi bi-translate"></i></div><h5>Language</h5><p>Bilingual</p></div>
+      </div>
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="150">
+        <div class="domain-card"><div class="di"><i class="bi bi-bar-chart-steps"></i></div><h5>Skill Level</h5><p>Beginner–Advanced</p></div>
+      </div>
+      <div class="col-lg-3 col-md-6" data-aos="fade-up">
+        <div class="domain-card"><div class="di"><i class="bi bi-person"></i></div><h5>Mode</h5><p>Offline</p></div>
+      </div>
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="50">
+        <div class="domain-card"><div class="di"><i class="bi bi-patch-check-fill"></i></div><h5>Certificate</h5><p>Yes</p></div>
+      </div>
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="domain-card"><div class="di"><i class="bi bi-briefcase-fill"></i></div><h5>Placement Assistance</h5><p>Yes</p></div>
+      </div>
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="150">
+        <div class="domain-card"><div class="di"><i class="bi bi-headset"></i></div><h5>Doubt Support</h5><p>1:1 Mentor</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================= COURSE INFO (AT A GLANCE) ========================================= -->
+<section class="eligibility-section">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="section-tag">COURSE INFO</span>
+      <h2 class="section-title">At A Glance</h2>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-lg-3 col-md-6" data-aos="fade-up">
+        <div class="eligibility-card"><i class="bi bi-person-workspace"></i><h6>Mentor</h6><p>Abhishek Shukla</p></div>
+      </div>
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="50">
+        <div class="eligibility-card"><i class="bi bi-globe2"></i><h6>Category</h6><p>Web Development</p></div>
+      </div>
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="eligibility-card"><i class="bi bi-people-fill"></i><h6>Enrolled</h6><p>5,600+ learners</p></div>
+      </div>
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="150">
+        <div class="eligibility-card"><i class="bi bi-clock-history"></i><h6>Duration</h6><p>6 Months</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================= THIS COHORT, IN NUMBERS ========================================= -->
+<section class="outcomes-section">
+  <div class="container">
+    <h1 class="outcome-heading">
+      <span>This Cohort, In Numbers</span>
+    </h1>
+
+    <div class="row g-4">
+
+      <div class="col-lg-3 col-6">
+        <div class="outcome-pill">
+          <i class="bi bi-people-fill"></i>
+          <h3 class="text-light">
+            <strong data-count="5600" data-suffix="+">0</strong>
+          </h3>
+          <p>Learners Enrolled</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-6">
+        <div class="outcome-pill">
+          <i class="bi bi-broadcast"></i>
+          <h3 class="text-light">
+            <strong data-count="94">0</strong>
+          </h3>
+          <p>Live Sessions</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-6">
+        <div class="outcome-pill">
+          <i class="bi bi-kanban-fill"></i>
+          <h3 class="text-light">
+            <strong data-count="12">0</strong>
+          </h3>
+          <p>Hands-on Projects</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-6">
+        <div class="outcome-pill">
+          <i class="bi bi-building"></i>
+          <h3 class="text-light">
+            <strong data-count="150" data-suffix="+">0</strong>
+          </h3>
+          <p>Hiring Partners</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========================================= CAREER OPPORTUNITIES ========================================= -->
+<section class="career-section" id="career">
+
+    <div class="career-bg-shape shape1"></div>
+    <div class="career-bg-shape shape2"></div>
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-6">
+
+                <div class="career-showcase">
+
+                    <div class="salary-card card1">
+                        <div class="icon">
+                            <i class="bi bi-code-slash"></i>
+                        </div>
+
+                        <h4>Frontend Developer</h4>
+                        <p>React • HTML • CSS</p>
+
+                        <div class="salary">
+                            ₹4–7 LPA
+                        </div>
+                    </div>
+
+                    <div class="salary-card card2">
+                        <div class="icon">
+                            <i class="bi bi-hdd-network-fill"></i>
+                        </div>
+
+                        <h4>Backend Developer</h4>
+                        <p>Node.js • Express</p>
+
+                        <div class="salary">
+                            ₹5–8 LPA
+                        </div>
+                    </div>
+
+                    <div class="salary-card card3">
+                        <div class="icon">
+                            <i class="bi bi-layers-fill"></i>
+                        </div>
+
+                        <h4>Full Stack Developer</h4>
+                        <p>MERN Stack</p>
+
+                        <div class="salary">
+                            ₹6–12 LPA
+                        </div>
+                    </div>
+
+                    <div class="salary-card card4">
+                        <div class="icon">
+                            <i class="bi bi-stars"></i>
+                        </div>
+
+                        <h4>MERN Engineer</h4>
+                        <p>Production Ready</p>
+
+                        <div class="salary">
+                            ₹7–14 LPA
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-6">
+
+                <span class="section-tag">
+                    Career Opportunities
+                </span>
+
+                <h2 class="section-title">
+                    Turn Skills Into High-Paying Careers
+                </h2>
+
+                <p class="section-text">
+
+                    Master industry-standard technologies, build real-world
+                    projects, prepare for interviews, and become job-ready for
+                    India's fastest-growing software companies.
+
+                </p>
+
+                <div class="career-stats">
+
+                    <div class="stat">
+                        <h3>150+</h3>
+                        <span>Hiring Partners</span>
+                    </div>
+
+                    <div class="stat">
+                        <h3>14 LPA</h3>
+                        <span>Highest Package</span>
+                    </div>
+
+                    <div class="stat">
+                        <h3>95%</h3>
+                        <span>Interview Success</span>
+                    </div>
+
+                </div>
+
+                <h6 class="partner-title">
+                    Trusted Hiring Companies
+                </h6>
+
+                <div class="company-list">
+
+                    <span>Infosys</span>
+                    <span>TCS</span>
+                    <span>Wipro</span>
+                    <span>Accenture</span>
+                    <span>Capgemini</span>
+                    <span>HCL</span>
+                    <span>Cognizant</span>
+                    <span>Zoho</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ========================================= RELATED / EXPLORE MORE ========================================= -->
+<section class="related-section">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <span class="section-tag">Explore More</span>
+            <h2 class="section-title">Continue Your Learning Journey</h2>
+            <p class="section-subtitle">
+                Discover more career-focused programs designed to help you master
+                today's most in-demand technologies.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-3 col-md-6">
+                <a href="index.html#courses" class="related-card">
+                    <div class="card-glow"></div>
+
+                    <div class="related-card-icon">
+                        <i class="bi bi-graph-up-arrow"></i>
+                    </div>
+
+                    <div class="related-card-body">
+                        <span>Trending</span>
+                        <h5>Data Science</h5>
+                        <small>Python • ML • Analytics</small>
+                    </div>
+
+                    <div class="arrow">
+                        <i class="bi bi-arrow-up-right"></i>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <a href="index.html#courses" class="related-card">
+
+                    <div class="card-glow"></div>
+
+                    <div class="related-card-icon">
+                        <i class="bi bi-cpu-fill"></i>
+                    </div>
+
+                    <div class="related-card-body">
+                        <span>AI Revolution</span>
+                        <h5>Artificial Intelligence</h5>
+                        <small>LLMs • Deep Learning</small>
+                    </div>
+
+                    <div class="arrow">
+                        <i class="bi bi-arrow-up-right"></i>
+                    </div>
+
+                </a>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <a href="index.html#courses" class="related-card">
+
+                    <div class="card-glow"></div>
+
+                    <div class="related-card-icon">
+                        <i class="bi bi-cloud-fill"></i>
+                    </div>
+
+                    <div class="related-card-body">
+                        <span>Enterprise</span>
+                        <h5>Cloud & DevOps</h5>
+                        <small>AWS • Docker • Kubernetes</small>
+                    </div>
+
+                    <div class="arrow">
+                        <i class="bi bi-arrow-up-right"></i>
+                    </div>
+
+                </a>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <a href="index.html#courses" class="related-card">
+
+                    <div class="card-glow"></div>
+
+                    <div class="related-card-icon">
+                        <i class="bi bi-shield-lock-fill"></i>
+                    </div>
+
+                    <div class="related-card-body">
+                        <span>High Demand</span>
+                        <h5>Cyber Security</h5>
+                        <small>Ethical Hacking • SOC</small>
+                    </div>
+
+                    <div class="arrow">
+                        <i class="bi bi-arrow-up-right"></i>
+                    </div>
+
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<!-- ========================================= ENROLL / FINAL CTA ========================================= -->
+<section class="contact-section" id="enroll">
+  <div class="container">
+    <div class="row align-items-stretch g-4 g-lg-5">
+
+      <!-- LEFT -->
+      <div class="col-lg-5 d-flex">
+        <div class="w-100">
+          <span class="section-tag">Enroll Now</span>
+          <h2 class="section-title">Next Cohort Starts Soon</h2>
+          <p class="section-text mb-4">Seats are limited to keep mentor time 1:1. Reserve yours before the batch fills.</p>
+
+          <div class="enroll-card price-card">
+            <div class="price-row"><strong>₹38,000</strong><del>₹50,000</del></div>
+            <span class="save-chip">SAVE ₹12,000 · EARLY COHORT</span>
+
+            <div class="seat-status">
+              <div class="seat-label">
+                <span><span class="live-dot"></span>42 of 60 seats reserved</span>
+                <span>70%</span>
+              </div>
+              <div class="seat-track"><div class="seat-fill" id="seatFill" data-target="70"></div></div>
+            </div>
+
+             <a href="https://www.quaeretech.com/TrainingRegistrationForm" class="btn btn-primary magnetic-btn mb-3" id="enrollBtn">
+              Enroll now <span class=""><i class="bi bi-arrow-right"></i></span>
+            </a>
+
+            <div class="contact-item" data-copy="Lucknow | Noida">
+              <i class="bi bi-geo-alt-fill"></i><span>Lucknow | Noida</span>
+              <span class="copy-hint">click to copy</span>
+            </div>
+            <div class="contact-item" data-copy="training@quaeretech.com">
+              <i class="bi bi-envelope-fill"></i><span>training@quaeretech.com</span>
+              <span class="copy-hint">click to copy</span>
+            </div>
+            <div class="contact-item" data-copy="+91 9196586951">
+              <i class="bi bi-telephone-fill"></i><span>+91 9196586951</span>
+              <span class="copy-hint">click to copy</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: terminal-style spec card -->
+      <div class="col-lg-7 d-flex">
+        <div class="terminal-card w-100" id="terminalCard">
+          <div class="terminal-titlebar">
+            <span class="terminal-dot red"></span>
+            <span class="terminal-dot yellow"></span>
+            <span class="terminal-dot green"></span>
+            <span class="terminal-filename">course.config.json</span>
+            <span class="terminal-live"><span class="live-dot"></span>live</span>
+          </div>
+          <div class="terminal-body" id="terminalBody">
+            <!-- lines injected by JS -->
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- mobile sticky CTA -->
+<div class="sticky-apply-cta">
+  <a href="https://www.quaeretech.com/TrainingRegistrationForm" class="btn btn-primary magnetic-btn">Enroll Now</a>
+</div>
+
+<!-- ========================================= FOOTER ========================================= -->
+
+<!-- ========================================= -->
+<!-- FOOTER -->
+<!-- ========================================= -->
+
+<footer class="footer">
+  <div class="container">
+
+    <div class="row g-5">
+
+      <div class="col-lg-4">
+        <div class="footer-brand">
+          <img src="assets/images/quaere-software-company-logo.png" alt="Logo" height="50">
+          
+        </div>
+        <p>Quaere Tech Hub is the dedicated Training, Skill Development, Internship, and Employability Division of Quaere Etechnologies Pvt. Ltd.</p>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/company/quaeretech" target="_blank"><i class="bi bi-linkedin"></i></a>
+          <a href="https://www.facebook.com/quaeretech/" target="_blank"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.youtube.com/@quaeretechlonogies" target="_blank"><i class="bi bi-youtube"></i></a>
+          <a href="https://www.instagram.com/quaeretech/?hl=en" target="_blank"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-2">
+        <h5>Links</h5>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="our-association.html">Our Associations</a></li>
+          <li><a href="summer-internship.html">Services</a></li>
+          <li><a href="reachus.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3">
+        <h5>Our Training Programs</h5>
+        <ul>
+          <li><a href="#">Summer Internship</a></li>
+          <li><a href="#">Vocational Training</a></li>
+          <li><a href="#">In-Campus Training</a></li>
+          <li><a href="#">Faculty Development Program</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3">
+        <h5>Newsletter</h5>
+        <p>Get latest technology updates and insights.</p>
+        <form class="newsletter-form">
+          <div class="input-group">
+            <input type="email" id="newsletter" class="form-control" placeholder="Email Address">
+            <button class="btn btn-primary">Subscribe</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+
+    <hr>
+
+    <!-- <div class="footer-bottom">
+      <div class="row">
+        <div class="col-md-6">© 2026 QuaereTech. All Rights Reserved.</div>
+        <div class="col-md-6 text-md-end">Privacy Policy | Terms & Conditions</div>
+      </div>
+    </div> -->
+
+  </div>
+</footer>
+
+   <footer class="quaere-footer " role="contentinfo">
+
+  <hr>
+    <!-- ── Navigation row ───────────────────────────────────────────────
+    <div class="qf-top">
+      <span class="qf-brand">Quaere</span>
+      <ul class="qf-nav" aria-label="Footer navigation">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div> -->
+
+    <!-- ── Hero text (hover to reveal) ───────────────────────────────── -->
+   <div class="qf-hero" id="qfHero">
+
+    <!-- Ghost Logo -->
+    <img
+        src="assets/images/QuaereText2.png"
+        class="qf-logo-base"
+        alt="Quaere">
+
+    <!-- Reveal Logo -->
+    <div class="qf-reveal-wrap" id="qfReveal">
+
+        <img
+            src="assets/images/QuaereText2.png"
+            class="qf-logo-reveal"
+            alt="Quaere">
+
+    </div>
+
+</div>
+
+    <!-- ── Bottom bar ─────────────────────────────────────────────────── -->
+    <!-- <div class="qf-divider"></div>
+    <div class="qf-bottom">
+      <p class="qf-copy">© 2025 Quaere. All rights reserved.</p>
+      <ul class="qf-legal">
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Terms</a></li>
+      </ul>
+    </div> -->
+     <div class="footer-bottom px-4 mt-5">
+      <div class="row">
+        <div class="col-md-6">© 2026 QuaereTech. All Rights Reserved.</div>
+        <div class="col-md-6 text-md-end">Privacy Policy | Terms & Conditions</div>
+      </div>
+    </div>
+
+
+  </footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script src="js/first.js"></script>
+<script src="js/pages.js"></script>
+<script src="js/about.js"></script>
+<script src="js/footer.js"></script>
+<script src="js/footer2.js"></script>
+
+<script>
+AOS.init({ duration: 700, once: true, offset: 60 });
+
+/* ---- Preloader ---- */
+(function(){
+  const circle = document.querySelector('.loader-progress-circle');
+  const percentEl = document.getElementById('loaderPercent');
+  const pre = document.getElementById('preloader');
+  const circumference = 2 * Math.PI * 50;
+  let p = 0;
+  const t = setInterval(()=>{
+    p += Math.random()*18;
+    if(p >= 100){ p = 100; clearInterval(t); setTimeout(()=>pre.classList.add('done'), 250); }
+    circle.style.strokeDashoffset = circumference - (p/100)*circumference;
+    percentEl.textContent = Math.round(p) + '%';
+  }, 140);
+  window.addEventListener('load', ()=>{ p = 100; circle.style.strokeDashoffset = 0; percentEl.textContent='100%'; setTimeout(()=>pre.classList.add('done'), 300); });
+})();
+
+/* ---- Scroll progress bar ---- */
+window.addEventListener('scroll', ()=>{
+  const h = document.documentElement;
+  const scrolled = (h.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
+  document.getElementById('scroll-progress').style.width = scrolled + '%';
+});
+/* ---- Counter animation for outcome pills ---- */
+var counters = document.querySelectorAll('[data-count]');
+let counted = false;
+function runCounters(){
+  if(counted) return;
+  counted = true;
+  counters.forEach(el=>{
+    const target = parseInt(el.getAttribute('data-count'), 10);
+    const suffix = el.getAttribute('data-suffix') || '';
+    let cur = 0;
+    const step = Math.max(1, Math.round(target/60));
+    const t = setInterval(()=>{
+      cur += step;
+      if(cur >= target){ cur = target; clearInterval(t); }
+      el.textContent = cur.toLocaleString() + suffix;
+    }, 20);
+  });
+}
+const outcomesSection = document.querySelector('.outcomes-section');
+if(outcomesSection){
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting) runCounters(); });
+  }, { threshold: 0.3 });
+  io.observe(outcomesSection);
+}
+
+/* ---- Magnetic button micro-interaction ---- */
+document.querySelectorAll('.magnetic-btn').forEach(btn=>{
+  btn.addEventListener('mousemove', (e)=>{
+    const r = btn.getBoundingClientRect();
+    const x = e.clientX - r.left - r.width/2;
+    const y = e.clientY - r.top - r.height/2;
+    btn.style.transform = `translate(${x*0.12}px, ${y*0.3}px)`;
+  });
+  btn.addEventListener('mouseleave', ()=>{ btn.style.transform = 'translate(0,0)'; });
+});
+</script>
+<script src="js/fullstackmern.js"></script>
+</body>
+</html>

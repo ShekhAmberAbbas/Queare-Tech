@@ -1235,10 +1235,11 @@ RESPONSIVE
     }
 }
 
+
 @media(max-width:768px){
 
     .hero-stat{
-        width:100%;
+        width:40%;
     }
 
     .track-card{
@@ -1255,6 +1256,13 @@ RESPONSIVE
 
     .cta-banner{
         padding:30px;
+    }
+}
+
+@media(max-width:459px){
+
+    .hero-stat{
+        width:90%;
     }
 }
 
