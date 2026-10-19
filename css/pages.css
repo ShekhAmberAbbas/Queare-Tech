@@ -1839,3 +1839,102 @@ MOBILE
         flex:0 0 100%;
     }
 }
+
+/* ==========================================
+   Premium Corner Ribbon
+========================================== */
+
+.course-card{
+    position:relative;
+    overflow:hidden;
+}
+
+.course-ribbon{
+    position:absolute;
+    top:18px;
+    right:-48px;
+    width:180px;
+    height:42px;
+    transform:rotate(45deg);
+    z-index:20;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:linear-gradient(135deg,#2563eb,#1d4ed8);
+
+    box-shadow:
+        0 12px 30px rgba(37,99,235,.35);
+
+    animation:ribbonGlow 3s ease-in-out infinite;
+}
+
+.course-ribbon span{
+    color:#fff;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:1.2px;
+    text-transform:uppercase;
+}
+
+/* Fold Effect */
+
+.course-ribbon::before,
+.course-ribbon::after{
+    content:"";
+    position:absolute;
+    width:12px;
+    height:12px;
+    background:#173f9f;
+    z-index:-1;
+}
+
+.course-ribbon::before{
+    left:0;
+    bottom:-6px;
+}
+
+.course-ribbon::after{
+    right:0;
+    top:-6px;
+}
+
+/* Soft Glow */
+
+@keyframes ribbonGlow{
+
+    0%,100%{
+        box-shadow:
+        0 10px 25px rgba(37,99,235,.30);
+    }
+
+    50%{
+        box-shadow:
+        0 16px 45px rgba(37,99,235,.55);
+    }
+
+}
+
+/* Mobile */
+
+@media(max-width:576px){
+
+    .course-ribbon{
+        width:155px;
+        height:36px;
+        right:-42px;
+        top:14px;
+    }
+
+    .course-ribbon span{
+        font-size:11px;
+    }
+
+}
+
+.course-ribbon span{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
